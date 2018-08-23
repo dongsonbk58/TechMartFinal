@@ -1,0 +1,49 @@
+/*
+ Localizable.strings
+ 
+ 
+ Created by ThanhLong on 7/26/18.
+ 
+ */
+
+//MARK:LoginViewController
+"LoginVC.button.login" = "Login";
+"LoginVC.button.signup" = "Sign Up";
+"LoginVC.textField.username" = "📧 Email";
+"LoginVC.textField.password" = "🔑 Password";
+"LoginVC.button.forgotPassword" = "Forgot password?";
+"LoginVC.alert.invalidEmail" = "Please enter a valid email address";
+"LoginVC.alert.invalidPass" = "Please enter password at least 6 characters";
+
+
+//MARK: SignUpViewController
+"SignUpVC.label.signup" = "Sign Up";
+"SignUpVC.textfield.email" = "Email";
+"SignUpVC.textfield.password" = "Password";
+"SignUpVC.textfield.repassword" = "Re-Password";
+"SignUpVC.button.continue" = "Continue";
+"SignUpVC.error.notmatching" = "Not matching Password!";
+"SignUpVC.error.invalidEmail" = "Invalid Email!";
+"SignUpVC.complete.signup" = "Complete sign up account!";
+"SignUpVC.error.exitEmail" = "Email is exit!";
+"SignUpVC.error.countPassword" = "Please enter password at least 6 characters";
+
+//MARK: ProfileViewController
+"ProfileVC.label.title" = "Profile";
+"ProfileVC.error.message" = "Error Add Profile";
+"Profile.complete.message" = "Complete updata Profile";
+
+//MARK: ForgotPasswordViewController
+"ForgotPasswordVC.label.text" = "We just need your registered Email to send you password reset instruction";
+"ForgotPasswordVC.button.title" = "Reset Password";
+"ForgotPasswordVC.complete.text" = "You can check email to recive new password!";
+"ForgotPasswordVC.error.text" = "Erorr. Please try again!";
+
+//MARK: SidebarViewController
+"SideMenuVC.cell.home" = "Home";
+"SideMenuVC.cell.logout" = "Logout";
+"SideMenuVC.cell.cart" = "Cart";
+"SideMenuVC.cell.setting" = "Setting";
+
+
+

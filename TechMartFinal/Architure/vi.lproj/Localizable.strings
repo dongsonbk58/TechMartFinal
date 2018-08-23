@@ -1,0 +1,45 @@
+/*
+ Localizable.strings
+ 
+ 
+ Created by ThanhLong on 7/26/18.
+ 
+ */
+//MARK:LoginViewController
+"LoginVC.button.login" = "Đăng nhập";
+"LoginVC.button.signup" = "Đăng kí";
+"LoginVC.textField.username" = "📧 Email";
+"LoginVC.textField.password" = "🔑 Mật khẩu";
+"LoginVC.button.forgotPassword" = "Quên mật khẩu?";
+"LoginVC.alert.invalidEmail" = "Vui lòng nhập địa chỉ email hợp lệ";
+"LoginVC.alert.invalidPass" = "Vui lòng nhập mật khẩu có ít nhất 6 kí tự";
+
+//MARK: SignUpViewController
+"SignUpVC.label.signup" = "Đăng ký";
+"SignUpVC.textfield.email" = "Email";
+"SignUpVC.textfield.password" = "Mật khẩu";
+"SignUpVC.textfield.repassword" = "Nhập lại mật khẩu";
+"SignUpVC.button.continue" = "Tiếp tục";
+"SignUpVC.error.notmatching" = "Mật khẩu không khớp nhau!";
+"SignUpVC.error.invalidEmail" = "Sai định dạng Email!";
+"SignUpVC.complete.signup" = "Đăng kí tài khoản thành công!";
+"SignUpVC.error.exitEmail" = "Email đã tồn tại!";
+"SignUpVC.error.countPassword" = "Vui lòng nhập mật khẩu có ít nhất 6 kí tự";
+
+//MARK: ProfileViewController
+"ProfileVC.label.title" = "Thông tin cá nhân";
+"ProfileVC.error.message" = "Lỗi thêm thông tin";
+"Profile.complete.message" = "Hoàn thành cập nhật thông tin";
+
+//MARK: ForgotPasswordViewController
+"ForgotPasswordVC.label.text" = "Bạn cần điền Email để lấy mật khẩu mới!";
+"ForgotPasswordVC.button.title" = "Lấy lại mật khẩu";
+"ForgotPasswordVC.complete.text" = "Bạn hãy kiểm tra email để lấy mật khẩu mới";
+"ForgotPasswordVC.error.text" = "Lỗi, Làm ơn thử lại sau!";
+
+//MARK: SidebarViewController
+"SideMenuVC.cell.home" = "Trang chính";
+"SideMenuVC.cell.logout" = "Đăng xuất";
+"SideMenuVC.cell.cart" = "Giỏ hàng";
+"SideMenuVC.cell.setting" = "Cài đặt";
+
