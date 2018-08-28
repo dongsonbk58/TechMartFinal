@@ -1,5 +1,5 @@
 //
-//  HomeViewModel.swift
+//  MainViewModel.swift
 //  TechMartFinal
 //
 //  Created by ThanhLong on 8/23/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-struct HomeViewModel: ViewModelType {
+struct MainViewModel: ViewModelType {
     
-    let useCase: HomeUseCaseType
-    let navigator: HomeNavigatorType
+    let useCase: MainUseCaseType
+    let navigator: MainNavigatorType
     
     struct Input {
         
@@ -21,7 +21,7 @@ struct HomeViewModel: ViewModelType {
         
     }
     
-    func transform(_ input: HomeViewModel.Input) -> HomeViewModel.Output {
+    func transform(_ input: MainViewModel.Input) -> MainViewModel.Output {
         return Output()
     }
 }

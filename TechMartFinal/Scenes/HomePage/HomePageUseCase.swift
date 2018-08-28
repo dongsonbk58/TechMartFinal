@@ -9,9 +9,11 @@
 import Foundation
 
 protocol HomePageUseCaseType {
-    
+    func loadData() -> Observable<Void>
 }
 
 struct HomePageUseCase: HomePageUseCaseType {
-    
+    func loadData() -> Observable<Void> {
+        return Observable.just(())
+    }
 }

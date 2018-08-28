@@ -9,9 +9,16 @@
 import Foundation
 
 protocol HomePageNavigatorType {
-    
+    func toHomePage()
 }
 
 struct HomepageNavigator: HomePageNavigatorType {
     unowned let navigationController: UINavigationController
+    
+    func toHomePage() {
+        let homePageVC = HomePageViewController.instantiate()
+        let vm = HomePageViewModel(useCase: HomePageUseCase(), navigator: self)
+        homePageVC.bindViewModel(to: vm)
+        navigationController.pushViewController(homePageVC, animated: true)
+    }
 }

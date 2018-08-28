@@ -20,7 +20,7 @@ struct AppNavigator: AppNavigatorType {
     func toLogin() {
         let loginVC = LoginViewController.instantiate()
         let navi = UINavigationController(rootViewController: loginVC)
-        let mainNavigator = LoginNavigator(navigationViewController: navi)
+        let mainNavigator = LoginNavigator(navigationViewController: navi, window: window)
         let useCase = LoginUseCase()
         let vm = LoginViewModel(useCase: useCase, navigator: mainNavigator)
         loginVC.bindViewModel(to: vm)

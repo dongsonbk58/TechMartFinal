@@ -79,7 +79,7 @@ struct LoginViewModel: ViewModelType {
                     .asDriverOnErrorJustComplete()
             }
             .do(onNext: {
-                self.navigator.toHome()
+                self.navigator.toMain()
             })
 
         return Output(isLogin: login,

@@ -1,5 +1,5 @@
 //
-//  HomeUseCase.swift
+//  MainUseCase.swift
 //  TechMartFinal
 //
 //  Created by ThanhLong on 8/23/18.
@@ -8,10 +8,10 @@
 
 import Foundation
 
-protocol HomeUseCaseType {
+protocol MainUseCaseType {
     
 }
 
-struct HomeUseCase: HomeUseCaseType {
+struct MainUseCase: MainUseCaseType {
     
 }

@@ -12,12 +12,13 @@ protocol LoginNavigatorType {
     func toLogin()
     func toSignUp()
     func toForgotPassword()
-    func toHome()
+    func toMain()
 }
 
 struct LoginNavigator :LoginNavigatorType {
     
     unowned let navigationViewController: UINavigationController
+    let window: UIWindow!
 
     func toLogin() {
         
@@ -33,8 +34,8 @@ struct LoginNavigator :LoginNavigatorType {
         navigator.toForgotPassword()
     }
     
-    func toHome() {
-        let navigator = HomeNavigator(navigationController: navigationViewController)
-        navigator.toHome()
+    func toMain() {
+        let navigator = MainNavigator(navigationController: navigationViewController, window: window)
+        navigator.toMain()
     }
 }
