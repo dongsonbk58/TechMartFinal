@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B083D06CD467C59C591F7B4 /* Pods_TechMartFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30627B4A6842772DB2D9D30 /* Pods_TechMartFinal.framework */; };
+		C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0762134D5D600F68F05 /* HomePageViewController.swift */; };
+		C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */; };
+		C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */; };
+		C918E07D2134DFAA00F68F05 /* HomePageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07C2134DFAA00F68F05 /* HomePageUseCase.swift */; };
 		FE752EF4212D389C0082B096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE752EF3212D389C0082B096 /* AppDelegate.swift */; };
 		FE752EFC212D389C0082B096 /* TechMartFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE752EFA212D389C0082B096 /* TechMartFinal.xcdatamodeld */; };
 		FE752EFE212D389F0082B096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE752EFD212D389F0082B096 /* Assets.xcassets */; };
@@ -102,6 +106,10 @@
 /* Begin PBXFileReference section */
 		6BDC93ED4C7AC696F0C86BA6 /* Pods-TechMartFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.release.xcconfig"; sourceTree = "<group>"; };
 		7F4575CF6E8C0103D0810FCB /* Pods-TechMartFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.debug.xcconfig"; sourceTree = "<group>"; };
+		C918E0762134D5D600F68F05 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
+		C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNavigator.swift; sourceTree = "<group>"; };
+		C918E07C2134DFAA00F68F05 /* HomePageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageUseCase.swift; sourceTree = "<group>"; };
 		E30627B4A6842772DB2D9D30 /* Pods_TechMartFinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechMartFinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE752EF0212D389C0082B096 /* TechMartFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechMartFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE752EF3212D389C0082B096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -231,6 +239,17 @@
 				6BDC93ED4C7AC696F0C86BA6 /* Pods-TechMartFinal.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C918E0752134D5C200F68F05 /* HomePage */ = {
+			isa = PBXGroup;
+			children = (
+				C918E0762134D5D600F68F05 /* HomePageViewController.swift */,
+				C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */,
+				C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */,
+				C918E07C2134DFAA00F68F05 /* HomePageUseCase.swift */,
+			);
+			path = HomePage;
 			sourceTree = "<group>";
 		};
 		FE752EE7212D389C0082B096 = {
@@ -445,7 +464,7 @@
 		FE752F58212D3CF50082B096 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				FEFFDCA1212EA7E7007212FB /* HomePage */,
+				C918E0752134D5C200F68F05 /* HomePage */,
 				FEECD053212E875E00421577 /* Home */,
 				FE752FAE212DBFDD0082B096 /* Profile */,
 				FE752F99212DBA4C0082B096 /* ForgotPassword */,
@@ -540,13 +559,6 @@
 				FEECD060212E899B00421577 /* HomeNavigator.swift */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		FEFFDCA1212EA7E7007212FB /* HomePage */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = HomePage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -727,6 +739,7 @@
 				FE752EF4212D389C0082B096 /* AppDelegate.swift in Sources */,
 				FE752F29212D3B780082B096 /* APIOutputBase.swift in Sources */,
 				FEECD030212E40F900421577 /* UIStoryboard.swift in Sources */,
+				C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */,
 				FE752FA1212DBA880082B096 /* ForgotPasswordViewController.swift in Sources */,
 				FE752F16212D3B120082B096 /* UIViewController+Debug.swift in Sources */,
 				FEECD041212E40F900421577 /* UIViewControllerExtendsion.swift in Sources */,
@@ -747,6 +760,7 @@
 				FE752F13212D3AFF0082B096 /* ErrorTracker.swift in Sources */,
 				FE752FA5212DBB210082B096 /* ForgotPasswordUseCase.swift in Sources */,
 				FEECD03C212E40F900421577 /* UITextField.swift in Sources */,
+				C918E07D2134DFAA00F68F05 /* HomePageUseCase.swift in Sources */,
 				FEECD03F212E40F900421577 /* UILabel.swift in Sources */,
 				FE752F0F212D3AFF0082B096 /* ViewModelType+Loadmore.swift in Sources */,
 				FEECD03B212E40F900421577 /* UIImageView.swift in Sources */,
@@ -754,6 +768,7 @@
 				FE752F49212D3C0B0082B096 /* APIOutput.swift in Sources */,
 				FE752F4C212D3C0B0082B096 /* APIService.swift in Sources */,
 				FE752FA3212DBAA40082B096 /* ForgotPasswordViewModel.swift in Sources */,
+				C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */,
 				FEECD039212E40F900421577 /* CAShapeLayer.swift in Sources */,
 				FEECD013212E3FF400421577 /* UIView+.swift in Sources */,
 				FE752F96212D67A40082B096 /* SignUpUseCase.swift in Sources */,
@@ -770,6 +785,7 @@
 				FE752F30212D3B8D0082B096 /* RxAlamofire+Multipart.swift in Sources */,
 				FEECD016212E404200421577 /* Constants.swift in Sources */,
 				FE752F10212D3AFF0082B096 /* BindableType.swift in Sources */,
+				C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */,
 				FE752F1E212D3B420082B096 /* LoadMoreCollectionView.swift in Sources */,
 				FE752F39212D3BB70082B096 /* HasID.swift in Sources */,
 				FE752F53212D3C940082B096 /* UIViewController+.swift in Sources */,

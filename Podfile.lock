@@ -42,6 +42,7 @@ PODS:
 DEPENDENCIES:
   - ActionSheetPicker-3.0 (~> 2.3)
   - FSPagerView
+  - FSPagerView (~> 0.7.0)
   - IQKeyboardManagerSwift
   - Localize-Swift
   - MJRefresh (~> 3.1)
@@ -110,6 +111,6 @@ SPEC CHECKSUMS:
   Then: ee21c97b85ff6062b9b0080c9abb1eea46743345
   Validator: bf211c1d71b3f910d230c09c70e62429d0fef63a
 
-PODFILE CHECKSUM: d4bc6e2cfb2a26b28cfe5922e72f226d685b6d86
+PODFILE CHECKSUM: 8b2d79a4d0b69b30f826b6615e300e721091beec
 
 COCOAPODS: 1.5.3

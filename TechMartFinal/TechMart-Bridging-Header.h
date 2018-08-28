@@ -20,3 +20,4 @@
 @import StatusBarNotifications;
 @import RxGesture;
 @import MKProgress;
+@import FSPagerView;

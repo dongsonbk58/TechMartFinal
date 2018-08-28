@@ -22,6 +22,7 @@ target 'TechMartFinal' do
   pod 'Localize-Swift'
   pod 'IQKeyboardManagerSwift’
   pod 'TextFieldEffects'
+  pod 'FSPagerView', '~> 0.7.0'
 
   # Rx
   pod 'RxSwift', '~> 4.1'

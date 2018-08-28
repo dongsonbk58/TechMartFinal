@@ -68,12 +68,12 @@ class ProfileViewController: UIViewController, BindableType {
     
     private var pickerViewBinder: Binder<Void> {
         return Binder(self, binding: { vc, _  in
-            
+            MKProgress.show()
             let picker = UIImagePickerController()
             picker.delegate = self
             picker.allowsEditing = true
             vc.present(picker, animated: true, completion: {
-             //   MBProgressHUD.hide(for: vc.view, animated: true)
+                MKProgress.hide()
             })
         })
     }
