@@ -5,7 +5,8 @@
 //  Created by ThanhLong on 7/31/18.
 //  Copyright © 2018 ThanhLong. All rights reserved.
 //
-
+#import "UIFont+Alignment.h"
+@import UIKit;
 @import RxSwift;
 @import RxCocoa;
 @import NSObject_Rx;

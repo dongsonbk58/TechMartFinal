@@ -18,3 +18,7 @@ struct NumberConstants {
     static let successStatusCode = 200
     static let expiredTokenStatusCode = 401
 }
+
+extension Notification.Name {
+    static let changeTab = Notification.Name(rawValue: "changeTabNotification")
+}

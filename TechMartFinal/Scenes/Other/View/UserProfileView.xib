@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UserProfileView" id="U6b-Vx-4bR" customClass="UserProfileView" customModule="TechMartFinal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="509" height="314"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cover" translatesAutoresizingMaskIntoConstraints="NO" id="Xut-1l-5Gd">
+                    <rect key="frame" x="0.0" y="0.0" width="509" height="140"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="140" id="zOf-C1-alT">
+                            <variation key="heightClass=regular-widthClass=regular" constant="230"/>
+                        </constraint>
+                    </constraints>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="6Y9-Nn-kBA">
+                    <rect key="frame" x="222.5" y="110" width="64" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="64" id="4WZ-cI-Px3">
+                            <variation key="heightClass=regular-widthClass=regular" constant="106"/>
+                        </constraint>
+                        <constraint firstAttribute="height" constant="64" id="VFM-tx-rkv">
+                            <variation key="heightClass=regular-widthClass=regular" constant="106"/>
+                        </constraint>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B5D-Y8-QZ6">
+                    <rect key="frame" x="222.5" y="110" width="64" height="64"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cev-sI-GyS">
+                    <rect key="frame" x="233.5" y="182" width="42.5" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="35" id="bX8-fJ-Y6p"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="B5D-Y8-QZ6" firstAttribute="leading" secondItem="6Y9-Nn-kBA" secondAttribute="leading" id="28L-4y-uHI"/>
+                <constraint firstItem="cev-sI-GyS" firstAttribute="centerX" secondItem="6Y9-Nn-kBA" secondAttribute="centerX" id="GpZ-pG-OGO"/>
+                <constraint firstItem="Xut-1l-5Gd" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" id="OyU-GA-Sil"/>
+                <constraint firstItem="cev-sI-GyS" firstAttribute="top" secondItem="6Y9-Nn-kBA" secondAttribute="bottom" constant="8" id="Ugk-GO-A8t">
+                    <variation key="heightClass=regular-widthClass=regular" constant="10"/>
+                </constraint>
+                <constraint firstItem="B5D-Y8-QZ6" firstAttribute="top" secondItem="6Y9-Nn-kBA" secondAttribute="top" id="X7f-Wi-xfK"/>
+                <constraint firstItem="B5D-Y8-QZ6" firstAttribute="trailing" secondItem="6Y9-Nn-kBA" secondAttribute="trailing" id="e8z-oR-QUn"/>
+                <constraint firstItem="Xut-1l-5Gd" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" id="fIX-xw-MTq"/>
+                <constraint firstItem="6Y9-Nn-kBA" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="i6u-Al-57X"/>
+                <constraint firstItem="VXr-Tz-HHm" firstAttribute="trailing" secondItem="Xut-1l-5Gd" secondAttribute="trailing" id="ifW-pf-aYN"/>
+                <constraint firstItem="6Y9-Nn-kBA" firstAttribute="bottom" secondItem="Xut-1l-5Gd" secondAttribute="bottom" constant="34" id="vgG-8f-96z">
+                    <variation key="heightClass=regular-widthClass=regular" constant="50"/>
+                </constraint>
+                <constraint firstItem="B5D-Y8-QZ6" firstAttribute="bottom" secondItem="6Y9-Nn-kBA" secondAttribute="bottom" id="xM6-1R-DCb"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <connections>
+                <outlet property="avatarButton" destination="B5D-Y8-QZ6" id="sOB-51-mDO"/>
+                <outlet property="avatarImageView" destination="6Y9-Nn-kBA" id="gPl-mN-8qc"/>
+                <outlet property="coverImageView" destination="Xut-1l-5Gd" id="RKI-2D-dIf"/>
+                <outlet property="nameLabel" destination="cev-sI-GyS" id="N9G-Wt-pb1"/>
+            </connections>
+            <point key="canvasLocation" x="128.5" y="180"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="cover" width="796" height="279"/>
+        <image name="user" width="43" height="44"/>
+    </resources>
+</document>

@@ -8,9 +8,11 @@
 
 import UIKit
 
-class HomePageViewController: UIViewController {
+class HomePageViewController: UIViewController, BindableType {
 
- 
+    var viewModel: HomePageViewModel!
+    var loadTrigger = BehaviorRelay<Void>(value: ())
+    
     @IBOutlet private weak var pagerView: FSPagerView! {
         didSet {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -37,13 +39,30 @@ class HomePageViewController: UIViewController {
     }
     
     func configView() {
+        title = "Home"
         searchBar.placeholder = "Nhập để tìm kiếm..."
+        searchBar.barStyle = UIBarStyle.black
+        searchBar.tintColor = UIColor.white
         let leftNavBarButton = UIBarButtonItem(customView:searchBar)
         self.navigationItem.rightBarButtonItem = leftNavBarButton
         self.pagerView.automaticSlidingInterval = 3.0 - self.pagerView.automaticSlidingInterval
         self.pagerView.interitemSpacing = CGFloat(1) * 20
         let newScale = 0.5 + CGFloat(0.9) * 0.5
         self.pagerView.itemSize = self.pagerView.frame.size.applying(CGAffineTransform(scaleX: newScale, y: newScale))
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadTrigger.accept(())
+    }
+    func bindViewModel() {
+        let input = HomePageViewModel.Input(loadTrigger: loadTrigger.asDriver())
+        let output = viewModel.transform(input)
+        output.data
+            .drive()
+            .disposed(by: rx.disposeBag)
+        output.loading
+            .drive(rx.isLoading)
+            .disposed(by: rx.disposeBag)
     }
 }
 
@@ -72,4 +91,8 @@ extension HomePageViewController: FSPagerViewDataSource,FSPagerViewDelegate {
         }
         self.pageControl.currentPage = pagerView.currentIndex
     }
+}
+
+extension HomePageViewController: StoryboardSceneBased {
+    static var sceneStoryboard: UIStoryboard = Storyboards.home
 }
