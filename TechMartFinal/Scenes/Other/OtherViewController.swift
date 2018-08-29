@@ -14,13 +14,13 @@ final class OtherViewController: UIViewController, BindableType {
     
     typealias MenuSectionModel = SectionModel<OtherViewModel.MenuSection, OtherViewModel.MenuItem>
     var viewModel: OtherViewModel!
+    private var options = Options()
     
     // MARK: - Private properties
     fileprivate var refreshControl: UIRefreshControl = UIRefreshControl()
     fileprivate var dataSource: RxCollectionViewSectionedReloadDataSource<MenuSectionModel>?
     fileprivate var newProfileImage = PublishSubject<UIImage>()
     fileprivate var newCoverImage = PublishSubject<UIImage>()
-    fileprivate var sectionInsets: UIEdgeInsets!
     fileprivate var screenSize = UIScreen.main.bounds.size
     fileprivate var cacheUrl: String?
     
@@ -43,8 +43,6 @@ final class OtherViewController: UIViewController, BindableType {
             $0.alwaysBounceVertical = true
         }
         collectionView.addSubview(refreshControl)
-        
-        sectionInsets = UIEdgeInsets(top: 25.0, left: 30.0, bottom: 30.0, right: 30)
     }
     
     deinit {
@@ -122,16 +120,24 @@ extension OtherViewController: StoryboardSceneBased {
 }
 
 extension OtherViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    fileprivate struct Options {
+        var spaceBetweenCell = 8
+        var itemsPerRow = 3
+        var sectionInsets: UIEdgeInsets = UIEdgeInsets(
+            top: 25.0,
+            left: 30.0,
+            bottom: 30.0,
+            right: 30.0
+        )
+    }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        let itemsPerRow = 3
-        let spaceBetweenCell = 8
-        let paddingSpace = sectionInsets.left + sectionInsets.right + CGFloat((itemsPerRow - 1) * spaceBetweenCell)
+
+        let paddingSpace = options.sectionInsets.left + options.sectionInsets.right + CGFloat((options.itemsPerRow - 1) * options.spaceBetweenCell)
         let availableWidth = screenSize.width - paddingSpace
-        let widthPerItem = availableWidth / CGFloat(itemsPerRow)
+        let widthPerItem = availableWidth / CGFloat(options.itemsPerRow)
         let heightPerItem = widthPerItem
         
         return CGSize(width: widthPerItem, height: heightPerItem)
@@ -140,7 +146,7 @@ extension OtherViewController: UICollectionViewDelegate, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {
-        return sectionInsets
+        return options.sectionInsets
     }
     
     func collectionView(_ collectionView: UICollectionView,
