@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail Production View Controller-->
+        <scene sceneID="bao-S7-o5H">
+            <objects>
+                <viewController storyboardIdentifier="DetailProductionViewController" id="33X-wI-4TR" customClass="DetailProductionViewController" customModule="TechMartFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lwH-gy-aba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NIj-Np-cSt">
+                                <rect key="frame" x="0.0" y="20" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tã-bỉm quần BoBBy L54 - hàng chính hãng" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="33o-39-lpJ">
+                                        <rect key="frame" x="8" y="30" width="359" height="22"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BoBBY" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJL-s5-ya8">
+                                        <rect key="frame" x="8" y="0.0" width="359" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="0uh-ES-W4w"/>
+                                    <constraint firstItem="33o-39-lpJ" firstAttribute="leading" secondItem="NIj-Np-cSt" secondAttribute="leading" constant="8" id="7oB-c3-ILY"/>
+                                    <constraint firstAttribute="bottom" secondItem="33o-39-lpJ" secondAttribute="bottom" constant="8" id="E5H-Td-rhR"/>
+                                    <constraint firstItem="gJL-s5-ya8" firstAttribute="height" secondItem="NIj-Np-cSt" secondAttribute="height" multiplier="1:2" id="HjV-o6-zLy"/>
+                                    <constraint firstItem="33o-39-lpJ" firstAttribute="top" secondItem="gJL-s5-ya8" secondAttribute="bottom" id="P9V-R5-n8L"/>
+                                    <constraint firstItem="gJL-s5-ya8" firstAttribute="top" secondItem="NIj-Np-cSt" secondAttribute="top" id="Y1m-gV-3yW"/>
+                                    <constraint firstItem="gJL-s5-ya8" firstAttribute="leading" secondItem="NIj-Np-cSt" secondAttribute="leading" constant="8" id="YuH-AX-r6Z"/>
+                                    <constraint firstAttribute="trailing" secondItem="gJL-s5-ya8" secondAttribute="trailing" constant="8" id="jii-7W-Usk"/>
+                                    <constraint firstAttribute="trailing" secondItem="33o-39-lpJ" secondAttribute="trailing" constant="8" id="xvQ-LQ-1uK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGp-fI-olk">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ah-ii-Fl5">
+                                        <rect key="frame" x="8" y="8" width="359" height="44"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="80" maxY="0.0"/>
+                                        <state key="normal" title="Cho vào giỏ hàng" image="cart">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="9ah-ii-Fl5" secondAttribute="trailing" constant="8" id="EBL-9g-aY1"/>
+                                    <constraint firstAttribute="bottom" secondItem="9ah-ii-Fl5" secondAttribute="bottom" constant="8" id="Ena-Tv-xJk"/>
+                                    <constraint firstAttribute="height" constant="60" id="SC7-TN-Tgf"/>
+                                    <constraint firstItem="9ah-ii-Fl5" firstAttribute="leading" secondItem="OGp-fI-olk" secondAttribute="leading" constant="8" id="UgL-gY-tB1"/>
+                                    <constraint firstItem="9ah-ii-Fl5" firstAttribute="top" secondItem="OGp-fI-olk" secondAttribute="top" constant="8" id="xNg-Ap-g5D"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GSh-xq-Rve">
+                                <rect key="frame" x="0.0" y="80" width="375" height="527"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OGp-fI-olk" firstAttribute="trailing" secondItem="p59-3u-m7B" secondAttribute="trailing" id="9HI-Q9-Mvo"/>
+                            <constraint firstItem="NIj-Np-cSt" firstAttribute="trailing" secondItem="p59-3u-m7B" secondAttribute="trailing" id="Ayz-zo-whY"/>
+                            <constraint firstItem="OGp-fI-olk" firstAttribute="leading" secondItem="p59-3u-m7B" secondAttribute="leading" id="BBz-ND-tDB"/>
+                            <constraint firstItem="p59-3u-m7B" firstAttribute="trailing" secondItem="GSh-xq-Rve" secondAttribute="trailing" id="MQH-DR-0Q5"/>
+                            <constraint firstItem="NIj-Np-cSt" firstAttribute="leading" secondItem="p59-3u-m7B" secondAttribute="leading" id="VSr-H6-Ho7"/>
+                            <constraint firstItem="GSh-xq-Rve" firstAttribute="top" secondItem="NIj-Np-cSt" secondAttribute="bottom" id="bsG-cf-bf0"/>
+                            <constraint firstItem="NIj-Np-cSt" firstAttribute="top" secondItem="p59-3u-m7B" secondAttribute="top" id="gDD-74-AO5"/>
+                            <constraint firstItem="OGp-fI-olk" firstAttribute="bottom" secondItem="p59-3u-m7B" secondAttribute="bottom" id="hAE-1l-Pgq"/>
+                            <constraint firstItem="OGp-fI-olk" firstAttribute="top" secondItem="GSh-xq-Rve" secondAttribute="bottom" id="pxB-Cl-ik5"/>
+                            <constraint firstItem="GSh-xq-Rve" firstAttribute="leading" secondItem="p59-3u-m7B" secondAttribute="leading" id="svh-sZ-tnY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p59-3u-m7B"/>
+                    </view>
+                    <connections>
+                        <outlet property="addToCartButton" destination="9ah-ii-Fl5" id="QPC-zK-79Q"/>
+                        <outlet property="productDetailLabel" destination="33o-39-lpJ" id="Ohh-te-UT2"/>
+                        <outlet property="productNameLabel" destination="gJL-s5-ya8" id="yfP-4A-PKh"/>
+                        <outlet property="tableView" destination="GSh-xq-Rve" id="90u-Gt-KsV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yct-5e-YZF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="76" y="143.47826086956522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="cart" width="16" height="16"/>
+    </resources>
+</document>
