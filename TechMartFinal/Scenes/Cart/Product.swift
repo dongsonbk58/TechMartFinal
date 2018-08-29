@@ -18,6 +18,7 @@ class Product: BaseModel {
     var categoryId: Int = 0
     var barCode: String = ""
     var sellId: Int = 0
+    var price: Int = 0
     
     required init?(map: Map) {
         self.mapping(map: map)
@@ -27,8 +28,10 @@ class Product: BaseModel {
         
     }
     
-    init(id: Int, title: String, description: String, numberFavorite: Int, sale: Int, categoryId: Int,barCode: String, sellId: Int) {
+    init(id: Int, title: String, price: Int, description: String, numberFavorite: Int, sale: Int, categoryId: Int,barCode: String, sellId: Int) {
         self.id = id
+        self.price = price
+        self.title = title
         self.description = description
         self.numberFavorite = numberFavorite
         self.sale = sale

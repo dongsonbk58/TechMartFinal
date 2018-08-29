@@ -19,6 +19,10 @@ struct CartUseCase: CartUseCaseType {
     }
     
     func getListCart() -> Observable<[Product]> {
-        return Observable.just([])
+        var datas: [Product] = []
+        datas.append(Product(id: 1, title: "abcdddddd", price: 100000, description: "abcddd", numberFavorite: 10, sale: 10, categoryId: 1, barCode: "aaaaa", sellId: 1))
+         datas.append(Product(id: 1, title: "abcdddddd", price: 100000, description: "abcddd", numberFavorite: 10, sale: 10, categoryId: 1, barCode: "aaaaa", sellId: 1))
+         datas.append(Product(id: 1, title: "abcdddddd", price: 100000, description: "abcddd", numberFavorite: 10, sale: 10, categoryId: 1, barCode: "aaaaa", sellId: 1))
+        return Observable.just(datas)
     }
 }

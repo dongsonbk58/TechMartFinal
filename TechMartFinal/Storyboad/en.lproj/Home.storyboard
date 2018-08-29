@@ -79,7 +79,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bqt-hy-ext"/>
                     <connections>
-                        <outlet property="cartTableView" destination="VxW-Pc-QSb" id="cXe-YN-ker"/>
+                        <outlet property="cartTableView" destination="VxW-Pc-QSb" id="5mG-XT-xur"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sQh-ln-Is2" userLabel="First Responder" sceneMemberID="firstResponder"/>

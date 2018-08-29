@@ -9,7 +9,7 @@
 import Foundation
 
 protocol CartNavigatorType {
-    func toDetail()
+    func toDetail(idProduct: Int)
     func toCart()
 }
 
@@ -17,7 +17,7 @@ struct CartNavigator: CartNavigatorType {
     
     unowned let navigationController: UINavigationController
     
-    func toDetail() {
+    func toDetail(idProduct: Int) {
         
     }
     
