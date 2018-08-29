@@ -11,7 +11,6 @@ import UIKit
 class HomePageViewController: UIViewController, BindableType {
 
     var viewModel: HomePageViewModel!
-    var loadTrigger = BehaviorRelay<Void>(value: ())
     
     @IBOutlet private weak var pagerView: FSPagerView! {
         didSet {
@@ -51,11 +50,17 @@ class HomePageViewController: UIViewController, BindableType {
         self.pagerView.itemSize = self.pagerView.frame.size.applying(CGAffineTransform(scaleX: newScale, y: newScale))
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        loadTrigger.accept(())
-    }
     func bindViewModel() {
-        let input = HomePageViewModel.Input(loadTrigger: loadTrigger.asDriver())
+        let trigger = NotificationCenter.default.rx.notification(Notification.Name.changeTab)
+            .map {
+                $0.object as? TabBarItemType
+            }
+            .unwrap()
+            .distinctUntilChanged()
+            .filter { $0 == TabBarItemType.home }
+            .mapToVoid()
+            .asDriverOnErrorJustComplete()
+        let input = HomePageViewModel.Input(loadTrigger: trigger)
         let output = viewModel.transform(input)
         output.data
             .drive()

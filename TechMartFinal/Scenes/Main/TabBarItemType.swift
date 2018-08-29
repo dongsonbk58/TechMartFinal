@@ -9,7 +9,7 @@ import UIKit
 
 enum TabBarItemType: Int {
     case home
-//    case cart
+    case cart
 //    case favorite
 //    case sell
     case other

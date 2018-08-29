@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0B083D06CD467C59C591F7B4 /* Pods_TechMartFinal.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E30627B4A6842772DB2D9D30 /* Pods_TechMartFinal.framework */; };
-		C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0762134D5D600F68F05 /* HomePageViewController.swift */; };
-		C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */; };
-		C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */; };
-		C918E07D2134DFAA00F68F05 /* HomePageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07C2134DFAA00F68F05 /* HomePageUseCase.swift */; };
 		521A57A82134E3C200369986 /* OtherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57A72134E3C200369986 /* OtherViewController.swift */; };
 		521A57AA2134E3DB00369986 /* OtherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57A92134E3DB00369986 /* OtherViewModel.swift */; };
 		521A57AC2134E3FE00369986 /* OtherUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57AB2134E3FE00369986 /* OtherUseCase.swift */; };
@@ -30,6 +26,17 @@
 		521A57D42135338100369986 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57D32135338100369986 /* Fonts.swift */; };
 		521A57D82135341600369986 /* UIFont+Alignment.m in Sources */ = {isa = PBXBuildFile; fileRef = 521A57D62135341600369986 /* UIFont+Alignment.m */; };
 		521A57DA213534A300369986 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57D9213534A300369986 /* UIColor+Ext.swift */; };
+		C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0762134D5D600F68F05 /* HomePageViewController.swift */; };
+		C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */; };
+		C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */; };
+		C918E07D2134DFAA00F68F05 /* HomePageUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07C2134DFAA00F68F05 /* HomePageUseCase.swift */; };
+		C918E080213629B800F68F05 /* CartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07F213629B800F68F05 /* CartViewController.swift */; };
+		C918E082213629CA00F68F05 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E081213629CA00F68F05 /* CartViewModel.swift */; };
+		C918E084213629DA00F68F05 /* CartUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E083213629DA00F68F05 /* CartUseCase.swift */; };
+		C918E086213629E200F68F05 /* CartNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E085213629E200F68F05 /* CartNavigator.swift */; };
+		C918E08821362E3200F68F05 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E08721362E3200F68F05 /* Product.swift */; };
+		C918E08C2136379500F68F05 /* CartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E08A2136379500F68F05 /* CartTableViewCell.swift */; };
+		C918E08D2136379500F68F05 /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C918E08B2136379500F68F05 /* CartTableViewCell.xib */; };
 		FE752EF4212D389C0082B096 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE752EF3212D389C0082B096 /* AppDelegate.swift */; };
 		FE752EFC212D389C0082B096 /* TechMartFinal.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FE752EFA212D389C0082B096 /* TechMartFinal.xcdatamodeld */; };
 		FE752EFE212D389F0082B096 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE752EFD212D389F0082B096 /* Assets.xcassets */; };
@@ -146,6 +153,13 @@
 		C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNavigator.swift; sourceTree = "<group>"; };
 		C918E07C2134DFAA00F68F05 /* HomePageUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageUseCase.swift; sourceTree = "<group>"; };
+		C918E07F213629B800F68F05 /* CartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewController.swift; sourceTree = "<group>"; };
+		C918E081213629CA00F68F05 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
+		C918E083213629DA00F68F05 /* CartUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartUseCase.swift; sourceTree = "<group>"; };
+		C918E085213629E200F68F05 /* CartNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartNavigator.swift; sourceTree = "<group>"; };
+		C918E08721362E3200F68F05 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Product.swift; path = TechMartFinal/Scenes/Cart/Product.swift; sourceTree = SOURCE_ROOT; };
+		C918E08A2136379500F68F05 /* CartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartTableViewCell.swift; sourceTree = "<group>"; };
+		C918E08B2136379500F68F05 /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		E30627B4A6842772DB2D9D30 /* Pods_TechMartFinal.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TechMartFinal.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE752EF0212D389C0082B096 /* TechMartFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechMartFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE752EF3212D389C0082B096 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -328,6 +342,27 @@
 			path = HomePage;
 			sourceTree = "<group>";
 		};
+		C918E07E2136299500F68F05 /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				C918E08921362F9700F68F05 /* CartTableViewCell */,
+				C918E07F213629B800F68F05 /* CartViewController.swift */,
+				C918E081213629CA00F68F05 /* CartViewModel.swift */,
+				C918E083213629DA00F68F05 /* CartUseCase.swift */,
+				C918E085213629E200F68F05 /* CartNavigator.swift */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
+		C918E08921362F9700F68F05 /* CartTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C918E08A2136379500F68F05 /* CartTableViewCell.swift */,
+				C918E08B2136379500F68F05 /* CartTableViewCell.xib */,
+			);
+			path = CartTableViewCell;
+			sourceTree = "<group>";
+		};
 		FE752EE7212D389C0082B096 = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +528,7 @@
 			isa = PBXGroup;
 			children = (
 				521A57B82134EEF800369986 /* User.swift */,
+				C918E08721362E3200F68F05 /* Product.swift */,
 				521A57BA2134F4FB00369986 /* BaseModel.swift */,
 			);
 			path = Entity;
@@ -546,6 +582,7 @@
 		FE752F58212D3CF50082B096 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C918E07E2136299500F68F05 /* Cart */,
 				C918E0752134D5C200F68F05 /* HomePage */,
 				521A57C02135205F00369986 /* Common */,
 				521A57A62134E2F500369986 /* Other */,
@@ -713,6 +750,7 @@
 				FE752FAA212DBFBC0082B096 /* ForgotPasswordViewController.xib in Resources */,
 				521A57B62134E70400369986 /* UserProfileView.xib in Resources */,
 				FE752F72212D42440082B096 /* Localizable.strings in Resources */,
+				C918E08D2136379500F68F05 /* CartTableViewCell.xib in Resources */,
 				FE752EFE212D389F0082B096 /* Assets.xcassets in Resources */,
 				FE752F66212D41AB0082B096 /* LaunchScreen.storyboard in Resources */,
 				FEECD056212E885F00421577 /* Home.storyboard in Resources */,
@@ -813,7 +851,9 @@
 				FE752F3A212D3BB70082B096 /* Page.swift in Sources */,
 				FEECD044212E413800421577 /* FontConstant.swift in Sources */,
 				FE752F41212D3BF60082B096 /* ValidationError.swift in Sources */,
+				C918E082213629CA00F68F05 /* CartViewModel.swift in Sources */,
 				FE752F89212D63DA0082B096 /* String+.swift in Sources */,
+				C918E084213629DA00F68F05 /* CartUseCase.swift in Sources */,
 				FE752F4A212D3C0B0082B096 /* APIUrls.swift in Sources */,
 				FEECD038212E40F900421577 /* UIImage.swift in Sources */,
 				FE752F3D212D3BC70082B096 /* Observable+.swift in Sources */,
@@ -832,6 +872,7 @@
 				FE752F16212D3B120082B096 /* UIViewController+Debug.swift in Sources */,
 				FEECD041212E40F900421577 /* UIViewControllerExtendsion.swift in Sources */,
 				FEECD04E212E55BB00421577 /* ProfileUseCase.swift in Sources */,
+				C918E08821362E3200F68F05 /* Product.swift in Sources */,
 				FEECD042212E40F900421577 /* URLRequest.swift in Sources */,
 				521A57B72134E70400369986 /* UserProfileView.swift in Sources */,
 				FEECD050212E55CD00421577 /* ProfileNavigator.swift in Sources */,
@@ -843,6 +884,7 @@
 				FE752F34212D3B9C0082B096 /* Utils.swift in Sources */,
 				FEECD03D212E40F900421577 /* UITextView.swift in Sources */,
 				FE752F1F212D3B420082B096 /* RefreshAutoFooter.swift in Sources */,
+				C918E080213629B800F68F05 /* CartViewController.swift in Sources */,
 				FEECD04C212E55B200421577 /* ProfileViewModel.swift in Sources */,
 				FE752F7A212D42B40082B096 /* AppNavigator.swift in Sources */,
 				521A57D02135332200369986 /* ShadowView.swift in Sources */,
@@ -855,6 +897,7 @@
 				C918E07D2134DFAA00F68F05 /* HomePageUseCase.swift in Sources */,
 				521A57D82135341600369986 /* UIFont+Alignment.m in Sources */,
 				FEECD03F212E40F900421577 /* UILabel.swift in Sources */,
+				C918E086213629E200F68F05 /* CartNavigator.swift in Sources */,
 				FE752F0F212D3AFF0082B096 /* ViewModelType+Loadmore.swift in Sources */,
 				FEECD03B212E40F900421577 /* UIImageView.swift in Sources */,
 				FEECD052212E561E00421577 /* ProfileViewController.swift in Sources */,
@@ -893,6 +936,7 @@
 				FEECD061212E899B00421577 /* MainNavigator.swift in Sources */,
 				FEECD034212E40F900421577 /* NSObject.swift in Sources */,
 				FE752F4B212D3C0B0082B096 /* APIError.swift in Sources */,
+				C918E08C2136379500F68F05 /* CartTableViewCell.swift in Sources */,
 				521A57B92134EEF800369986 /* User.swift in Sources */,
 				FEECD018212E407C00421577 /* ColorConstant.swift in Sources */,
 				FE752F92212D67610082B096 /* SignUpViewModel.swift in Sources */,

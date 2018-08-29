@@ -27,16 +27,16 @@ struct MainNavigator: MainNavigatorType {
                     $0.tag = TabBarItemType.home.rawValue
             }
         }
-//
-//        let cartNav = BaseNavigationController().then {
-//            $0.tabBarItem = UITabBarItem(title: "Cart",
-//                                         image: #imageLiteral(resourceName: "tabbar_icon_conversation_off"),
-//                                         selectedImage: #imageLiteral(resourceName: "tabbar_icon_conversation_on"))
-//                .then {
-//                    $0.tag = TabBarItemType.cart.rawValue
-//            }
-//        }
-//
+
+        let cartNav = BaseNavigationController().then {
+            $0.tabBarItem = UITabBarItem(title: "Cart",
+                                         image: #imageLiteral(resourceName: "cart"),
+                                         selectedImage: #imageLiteral(resourceName: "cart_selected"))
+                .then {
+                    $0.tag = TabBarItemType.cart.rawValue
+            }
+        }
+
 //        let favoriteNav = BaseNavigationController().then {
 //            $0.tabBarItem = UITabBarItem(title: "Favorite",
 //                                         image: #imageLiteral(resourceName: "tabbar_icon_todo_off"),
@@ -67,12 +67,13 @@ struct MainNavigator: MainNavigatorType {
         let mainTabBarController = MainTabBarController().then {
             $0.viewControllers = [
                 homeNav,
-//                cartNav,
+                cartNav,
 //                favoriteNav,
 //                sellNav,
                 otherNav
             ]
         }
+
         window.rootViewController = mainTabBarController
         window.makeKeyAndVisible()
         
@@ -81,5 +82,8 @@ struct MainNavigator: MainNavigatorType {
         
         let homeNavigator = HomepageNavigator(navigationController: homeNav)
         homeNavigator.toHomePage()
+        
+        let cartNavigation = CartNavigator(navigationController: cartNav)
+        cartNavigation.toCart()
     }
 }

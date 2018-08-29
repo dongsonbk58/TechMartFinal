@@ -14,7 +14,12 @@ protocol OtherUseCaseType {
 
 struct OtherUseCase: OtherUseCaseType {
     func reloadUserInformation() -> Observable<User> {
-        let user = User(id: 1, name: "son", email: "son@gmail.com", imageProfileUrl: nil, imageCoverUrl: nil, gender: .male, userId: "son")
+        let user = User(id: 1, name: "son",
+                        email: "son@gmail.com",
+                        imageProfileUrl: nil,
+                        imageCoverUrl: nil,
+                        gender: .male,
+                        userId: "son")
         return Observable.just(user)
     }
 }

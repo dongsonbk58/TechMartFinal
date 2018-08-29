@@ -22,3 +22,4 @@
 @import RxGesture;
 @import MKProgress;
 @import FSPagerView;
+@import ObjectMapper;
