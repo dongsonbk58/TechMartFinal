@@ -24,7 +24,8 @@ struct HomePageViewModel: ViewModelType {
                 .asDriverOnErrorJustComplete()
         }
         return Output(data: data,
-                      loading: activityIndicator.asDriver())
+                      loading: activityIndicator.asDriver(),
+                      error: errorTracker.asDriver())
     }
     
     struct Input {
@@ -34,5 +35,6 @@ struct HomePageViewModel: ViewModelType {
     struct Output {
         let data: Driver<Void>
         let loading: Driver<Bool>
+        let error: Driver<Error>
     }
 }

@@ -68,6 +68,9 @@ class HomePageViewController: UIViewController, BindableType {
         output.loading
             .drive(rx.isLoading)
             .disposed(by: rx.disposeBag)
+        output.error
+            .drive(rx.error)
+            .disposed(by: rx.disposeBag)
     }
 }
 
