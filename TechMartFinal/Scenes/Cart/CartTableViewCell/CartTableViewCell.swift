@@ -18,14 +18,30 @@ class CartTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var priceProductLabel: UILabel!
     @IBOutlet private weak var titleProductLabel: UILabel!
     
+    var decProductAction: (() -> Void)?
+    var incProductAction: (() -> Void)?
+    var removeProductAction: (() -> Void)?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
     
-    func configView(with product: Product) {
-        titleProductLabel.text = product.title
-        priceProductLabel.text =  "\(product.price)"
-        
+    @IBAction func removeProductAction(_ sender: UIButton) {
+        removeProductAction?()
+    }
+    
+    @IBAction func incProductAction(_ sender: UIButton) {
+        incProductAction?()
+    }
+    
+    @IBAction func decProductAction(_ sender: UIButton) {
+        decProductAction?()
+    }
+    
+    func configView(with cart: Cart) {
+        titleProductLabel.text = cart.product?.title ?? ""
+        priceProductLabel.text =  "\(cart.product?.price ?? 0)"
+        countProductLabel.text = "\(cart.count)"
     }
     
 }

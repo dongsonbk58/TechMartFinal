@@ -31,28 +31,82 @@ struct CartViewModel: ViewModelType {
             .map { indexPath, dataList in
                 return dataList[indexPath.row]
             }
-            .do(onNext: { (product) in
-                self.navigation.toDetail(idProduct: product.id)
+            .do(onNext: { (cart) in
+                self.navigation.toDetail(idProduct: cart.product?.id ?? 0)
             })
             .mapToVoid()
+        
+        let decProduct = input.decProduct.withLatestFrom(data) { indexPath, listData -> Cart in
+                listData[indexPath.row].count -= 1
+                return listData[indexPath.row]
+            }
+            .flatMapLatest {
+                return self.usecase.updateCart(cart: $0)
+                    .trackError(errorTracker)
+                    .trackActivity(activityIndicator)
+                    .asDriverOnErrorJustComplete()
+            }
+            .filter {
+                $0
+            }
+            .mapToVoid()
+        
+        let incProduct = input.incProduct.withLatestFrom(data) { indexPath, listData -> Cart in
+            listData[indexPath.row].count += 1
+            return listData[indexPath.row]
+            }
+            .flatMapLatest {
+                return self.usecase.updateCart(cart: $0)
+                    .trackError(errorTracker)
+                    .trackActivity(activityIndicator)
+                    .asDriverOnErrorJustComplete()
+            }
+            .filter {
+                $0
+            }
+            .mapToVoid()
+        
+        let removeProduct = input.removeProduct.withLatestFrom(data) { indexPath, listData -> Cart in
+                return listData[indexPath.row]
+            }
+            .flatMapLatest {
+                return self.usecase.remoteCart(cart: $0)
+                    .trackError(errorTracker)
+                    .trackActivity(activityIndicator)
+                    .asDriverOnErrorJustComplete()
+            }
+            .filter {
+                $0
+            }
+            .mapToVoid()
+        
         return Output(error: errorTracker.asDriver(),
                       loading: activityIndicator.asDriver(),
                       refreshing: input.reloadTrigger,
                       productList: data,
-                      selectedProduct: selectedProduct)
+                      selectedProduct: selectedProduct,
+                      decProduct: decProduct,
+                      incProduct: incProduct,
+                      removeProduct: removeProduct)
     }
     
     struct Input {
         let loadTrigger: Driver<Void>
         let reloadTrigger: Driver<Void>
         let selectRepoTrigger: Driver<IndexPath>
+        let decProduct: Driver<IndexPath>
+        let incProduct: Driver<IndexPath>
+        let removeProduct: Driver<IndexPath>
     }
     
     struct Output {
         let error: Driver<Error>
         let loading: Driver<Bool>
         let refreshing: Driver<Void>
-        let productList: Driver<[Product]>
+        let productList: Driver<[Cart]>
         let selectedProduct: Driver<Void>
+        let decProduct: Driver<Void>
+        let incProduct: Driver<Void>
+        let removeProduct: Driver<Void>
     }
 }

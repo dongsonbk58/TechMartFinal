@@ -12,6 +12,10 @@ class CartViewController: UIViewController, BindableType {
 
     var viewModel: CartViewModel!
     var refreshData = PublishSubject<Void>()
+    var decProduct = PublishSubject<IndexPath>()
+    var incProduct = PublishSubject<IndexPath>()
+    var removeProduct = PublishSubject<IndexPath>()
+    var loadTrigger = PublishSubject<Void>()
     
     lazy var refreshControl: UIRefreshControl = {
         let refreshControl = UIRefreshControl()
@@ -29,10 +33,11 @@ class CartViewController: UIViewController, BindableType {
         super.viewDidLoad()
         configUI()
     }
-    
+
     @objc func handleRefresh(_ refreshControl: UIRefreshControl) {
         refreshData.onNext(())
     }
+
     func configUI() {
         title = "Cart"
         cartTableView.do {
@@ -42,29 +47,36 @@ class CartViewController: UIViewController, BindableType {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        loadTrigger.onNext(())
+    }
+    
     func bindViewModel() {
-        let trigger = NotificationCenter.default.rx.notification(Notification.Name.changeTab)
-            .map {
-                $0.object as? TabBarItemType
-            }
-            .unwrap()
-            .distinctUntilChanged()
-            .filter { $0 == TabBarItemType.cart }
-            .mapToVoid()
-            .asDriverOnErrorJustComplete()
-        let input = CartViewModel.Input(loadTrigger: trigger,
+        let input = CartViewModel.Input(loadTrigger: loadTrigger.asDriverOnErrorJustComplete(),
                                         reloadTrigger: refreshData.asDriverOnErrorJustComplete(),
-                                        selectRepoTrigger: cartTableView.rx.itemSelected.asDriver())
+                                        selectRepoTrigger: cartTableView.rx.itemSelected.asDriver(),
+                                        decProduct: decProduct.asDriverOnErrorJustComplete(),
+                                        incProduct: incProduct.asDriverOnErrorJustComplete(),
+                                        removeProduct: removeProduct.asDriverOnErrorJustComplete())
         let output = viewModel.transform(input)
         
         output.productList
-            .drive(cartTableView.rx.items) { tableView, index, product in
+            .drive(cartTableView.rx.items) { tableView, index, cart in
                 return tableView.dequeueReusableCell(
                     for: IndexPath(row: index, section: 0),
                     cellType: CartTableViewCell.self)
                     .then {
-                        $0.configView(with: product)
-                }
+                        $0.configView(with: cart )
+                        $0.decProductAction = {
+                            self.decProduct.onNext(IndexPath(item: index, section: 0))
+                        }
+                        $0.incProductAction = {
+                            self.incProduct.onNext(IndexPath(item: index, section: 0))
+                        }
+                        $0.removeProductAction = {
+                            self.removeProduct.onNext(IndexPath(item: index, section: 0))
+                        }
+                    }
             }
             .disposed(by: rx.disposeBag)
         output.loading
@@ -78,8 +90,21 @@ class CartViewController: UIViewController, BindableType {
         output.refreshing
             .drive(refreshBinding)
             .disposed(by: rx.disposeBag)
+        
         output.selectedProduct
             .drive()
+            .disposed(by: rx.disposeBag)
+        
+        output.decProduct
+            .drive(decProductBinding)
+            .disposed(by: rx.disposeBag)
+        
+        output.incProduct
+            .drive(decProductBinding)
+            .disposed(by: rx.disposeBag)
+        
+        output.removeProduct
+            .drive(decProductBinding)
             .disposed(by: rx.disposeBag)
     }
     
@@ -87,6 +112,12 @@ class CartViewController: UIViewController, BindableType {
         return Binder(self, binding: { vc, _ in
             vc.cartTableView.reloadData()
             vc.refreshControl.endRefreshing()
+        })
+    }
+    
+    private var decProductBinding: Binder<Void> {
+        return Binder(self, binding: { vc, _ in
+           vc.loadTrigger.onNext(())
         })
     }
 }

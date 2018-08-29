@@ -37,14 +37,14 @@ struct MainNavigator: MainNavigatorType {
             }
         }
 
-//        let favoriteNav = BaseNavigationController().then {
-//            $0.tabBarItem = UITabBarItem(title: "Favorite",
-//                                         image: #imageLiteral(resourceName: "tabbar_icon_todo_off"),
-//                                         selectedImage: #imageLiteral(resourceName: "tabbar_icon_todo_on"))
-//                .then {
-//                    $0.tag = TabBarItemType.favorite.rawValue
-//            }
-//        }
+        let favoriteNav = BaseNavigationController().then {
+            $0.tabBarItem = UITabBarItem(title: "Favorite",
+                                         image: #imageLiteral(resourceName: "favorite"),
+                                         selectedImage: #imageLiteral(resourceName: "favorite_selected"))
+                .then {
+                    $0.tag = TabBarItemType.favorite.rawValue
+            }
+        }
 //
 //        let sellNav = BaseNavigationController().then {
 //            $0.tabBarItem = UITabBarItem(title: "Sell",
@@ -68,7 +68,7 @@ struct MainNavigator: MainNavigatorType {
             $0.viewControllers = [
                 homeNav,
                 cartNav,
-//                favoriteNav,
+                favoriteNav,
 //                sellNav,
                 otherNav
             ]
@@ -85,5 +85,8 @@ struct MainNavigator: MainNavigatorType {
         
         let cartNavigation = CartNavigator(navigationController: cartNav)
         cartNavigation.toCart()
+        
+        let favoriteNavigation = FavoriteNavigator(navigationController: favoriteNav)
+        favoriteNavigation.toFavorite()
     }
 }
