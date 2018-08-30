@@ -35,6 +35,8 @@
 		521A57ED21377F5500369986 /* CountProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57EB21377F5500369986 /* CountProductTableViewCell.swift */; };
 		521A57EE21377F5500369986 /* CountProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521A57EC21377F5500369986 /* CountProductTableViewCell.xib */; };
 		521A57EF21379AE200369986 /* Production.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A57F121379AE200369986 /* Production.storyboard */; };
+		C90BD3622137C42900A95E95 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */; };
+		C90BD3632137C42900A95E95 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */; };
 		C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0762134D5D600F68F05 /* HomePageViewController.swift */; };
 		C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */; };
 		C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */; };
@@ -173,6 +175,8 @@
 		521A57F221379AE400369986 /* vi */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = vi; path = vi.lproj/Production.storyboard; sourceTree = "<group>"; };
 		6BDC93ED4C7AC696F0C86BA6 /* Pods-TechMartFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.release.xcconfig"; sourceTree = "<group>"; };
 		7F4575CF6E8C0103D0810FCB /* Pods-TechMartFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.debug.xcconfig"; sourceTree = "<group>"; };
+		C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
+		C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		C918E0762134D5D600F68F05 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNavigator.swift; sourceTree = "<group>"; };
@@ -383,6 +387,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C90BD35B2137C3D100A95E95 /* FavoriteTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */,
+				C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */,
+			);
+			path = FavoriteTableViewCell;
+			sourceTree = "<group>";
+		};
 		C918E0752134D5C200F68F05 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -418,6 +431,7 @@
 		FE1BD4C32136EAA60050D86E /* Favorite */ = {
 			isa = PBXGroup;
 			children = (
+				C90BD35B2137C3D100A95E95 /* FavoriteTableViewCell */,
 				FE1BD4C42136EB600050D86E /* FavoriteViewController.swift */,
 				FE1BD4C62136EB7F0050D86E /* FavoriteViewModel.swift */,
 				FE1BD4C82136EB8C0050D86E /* FavoriteUseCase.swift */,
@@ -812,6 +826,7 @@
 			files = (
 				FEECD047212E539B00421577 /* ProfileViewController.xib in Resources */,
 				521A57EA21367A9700369986 /* ImageDetailTableViewCell.xib in Resources */,
+				C90BD3632137C42900A95E95 /* FavoriteTableViewCell.xib in Resources */,
 				FE752F8C212D67430082B096 /* SignUpViewController.xib in Resources */,
 				521A57CE213532DB00369986 /* MenuCell.xib in Resources */,
 				FE752F6C212D420F0082B096 /* Login.storyboard in Resources */,
@@ -954,6 +969,7 @@
 				FE752EFC212D389C0082B096 /* TechMartFinal.xcdatamodeld in Sources */,
 				521A57D42135338100369986 /* Fonts.swift in Sources */,
 				FEECD035212E40F900421577 /* UITableView.swift in Sources */,
+				C90BD3622137C42900A95E95 /* FavoriteTableViewCell.swift in Sources */,
 				521A57BF21351DBB00369986 /* MainTabBarController.swift in Sources */,
 				FEECD033212E40F900421577 /* Color.swift in Sources */,
 				FE752F34212D3B9C0082B096 /* Utils.swift in Sources */,

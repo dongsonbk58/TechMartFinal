@@ -43,7 +43,8 @@ class FavoriteViewController: UIViewController, BindableType {
         title = "Favorite"
         favoriteTableView.do {
             $0.addSubview(refreshControl)
-            $0.rowHeight = 100
+            $0.rowHeight = 80
+            $0.register(cellType: FavoriteTableViewCell.self)
         }
     }
     
@@ -53,6 +54,17 @@ class FavoriteViewController: UIViewController, BindableType {
                                             reloadTrigger: refreshData.asDriverOnErrorJustComplete())
         
         let output = viewModel.transform(input)
+        
+        output.productList
+            .drive(favoriteTableView.rx.items) { tableView, index, product in
+                return tableView.dequeueReusableCell(
+                    for: IndexPath(row: index, section: 0),
+                    cellType: FavoriteTableViewCell.self)
+                    .then {
+                        $0.configUI(product: product)
+                    }
+            }
+            .disposed(by: rx.disposeBag)
         
         output.error
             .drive(rx.error)
@@ -73,7 +85,7 @@ class FavoriteViewController: UIViewController, BindableType {
     
     private var refreshBinding: Binder<Void> {
         return Binder(self, binding: { vc, _ in
-            vc.favoriteTableView.reloadData()
+            vc.loadTrigger.onNext(())
             vc.refreshControl.endRefreshing()
         })
     }

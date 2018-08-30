@@ -10,61 +10,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TechMartFinal/Scenes/Cart/CartViewController.swift"
-            timestampString = "557219602.346893"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "bindViewModel()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "TechMartFinal/Scenes/Cart/CartViewController.swift"
-            timestampString = "557219602.346967"
+            timestampString = "557304558.164242"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "38"
             endingLineNumber = "38"
-            landmarkName = "configUI()"
+            landmarkName = "handleRefresh(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TechMartFinal.CartViewController.configUI() -&gt; ()"
-                  moduleName = "TechMartFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vu.thanh.long/Desktop/TechMartFinal/TechMartFinal/TechMartFinal/Scenes/Cart/CartViewController.swift"
-                  timestampString = "557219815.990764"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "38"
-                  endingLineNumber = "38"
-                  offsetFromSymbolStart = "159">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__ObjC.UITableView) -&gt; () in TechMartFinal.CartViewController.configUI() -&gt; ()"
-                  moduleName = "TechMartFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vu.thanh.long/Desktop/TechMartFinal/TechMartFinal/TechMartFinal/Scenes/Cart/CartViewController.swift"
-                  timestampString = "557219815.992771"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "39"
-                  endingLineNumber = "39"
-                  offsetFromSymbolStart = "18">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -74,45 +26,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "TechMartFinal/Scenes/Cart/CartViewController.swift"
-            timestampString = "557219814.772048"
+            timestampString = "557304558.1643699"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
             endingLineNumber = "47"
-            landmarkName = "bindViewModel()"
+            landmarkName = "configUI()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TechMartFinal.CartViewController.bindViewModel() -&gt; ()"
-                  moduleName = "TechMartFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vu.thanh.long/Desktop/TechMartFinal/TechMartFinal/TechMartFinal/Scenes/Cart/CartViewController.swift"
-                  timestampString = "557219815.9974411"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "47"
-                  endingLineNumber = "47"
-                  offsetFromSymbolStart = "287">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.Notification) -&gt; Swift.Optional&lt;TechMartFinal.TabBarItemType&gt; in TechMartFinal.CartViewController.bindViewModel() -&gt; ()"
-                  moduleName = "TechMartFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/vu.thanh.long/Desktop/TechMartFinal/TechMartFinal/TechMartFinal/Scenes/Cart/CartViewController.swift"
-                  timestampString = "557219815.9991111"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "48"
-                  endingLineNumber = "48"
-                  offsetFromSymbolStart = "16">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
