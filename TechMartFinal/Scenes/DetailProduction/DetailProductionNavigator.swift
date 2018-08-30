@@ -7,9 +7,13 @@
 //
 
 protocol DetailProductionNavigatorType {
-    
+    func dismiss()
 }
 
 struct DetailProductionNavigator: DetailProductionNavigatorType {
+    unowned let navigationController: UINavigationController
     
+    func dismiss() {
+        navigationController.dismiss(animated: true, completion: nil)
+    }
 }

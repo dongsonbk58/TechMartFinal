@@ -35,7 +35,6 @@ class ImageDetailTableViewCell: UITableViewCell, NibReusable {
     }
     
     func configView() {
-        
         pagerView.delegate = self
         pagerView.dataSource = self
         self.pagerView.automaticSlidingInterval = 3.0 - self.pagerView.automaticSlidingInterval

@@ -10,6 +10,6 @@ protocol DetailProductionUseCaseType {
     
 }
 
-struct DetailProductionUseCase {
+struct DetailProductionUseCase: DetailProductionUseCaseType {
     
 }
