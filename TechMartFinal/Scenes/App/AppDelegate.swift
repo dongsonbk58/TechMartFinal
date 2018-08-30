@@ -40,7 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.isStatusBarHidden = false
         let statusBar: UIView = UIApplication.shared.value(forKey: "statusBar") as! UIView
         UINavigationBar.appearance().barStyle = .black
-        statusBar.backgroundColor = UIColor.black
+        statusBar.backgroundColor = UIColor.red
         UIApplication.shared.statusBarStyle = .lightContent
     }
     

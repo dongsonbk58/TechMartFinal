@@ -35,6 +35,7 @@
 		521A57ED21377F5500369986 /* CountProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57EB21377F5500369986 /* CountProductTableViewCell.swift */; };
 		521A57EE21377F5500369986 /* CountProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521A57EC21377F5500369986 /* CountProductTableViewCell.xib */; };
 		521A57EF21379AE200369986 /* Production.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A57F121379AE200369986 /* Production.storyboard */; };
+		521A57F42137C1CF00369986 /* Layer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57F32137C1CF00369986 /* Layer+.swift */; };
 		C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0762134D5D600F68F05 /* HomePageViewController.swift */; };
 		C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */; };
 		C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */; };
@@ -171,6 +172,7 @@
 		521A57EC21377F5500369986 /* CountProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountProductTableViewCell.xib; sourceTree = "<group>"; };
 		521A57F021379AE200369986 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Production.storyboard; sourceTree = "<group>"; };
 		521A57F221379AE400369986 /* vi */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = vi; path = vi.lproj/Production.storyboard; sourceTree = "<group>"; };
+		521A57F32137C1CF00369986 /* Layer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layer+.swift"; sourceTree = "<group>"; };
 		6BDC93ED4C7AC696F0C86BA6 /* Pods-TechMartFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.release.xcconfig"; sourceTree = "<group>"; };
 		7F4575CF6E8C0103D0810FCB /* Pods-TechMartFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		C918E0762134D5D600F68F05 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -627,6 +629,7 @@
 				FEECD01C212E40F400421577 /* UIStoryboard.swift */,
 				FEECD02D212E40F800421577 /* UIViewControllerExtendsion.swift */,
 				FEECD02E212E40F900421577 /* URLRequest.swift */,
+				521A57F32137C1CF00369986 /* Layer+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -861,8 +864,8 @@
 				"${BUILT_PRODUCTS_DIR}/FSPagerView/FSPagerView.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Localize-Swift/Localize_Swift.framework",
+				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
-				"${BUILT_PRODUCTS_DIR}/MKProgress/MKProgress.framework",
 				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/OrderedSet/OrderedSet.framework",
@@ -886,8 +889,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FSPagerView.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Localize_Swift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MKProgress.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/OrderedSet.framework",
@@ -920,6 +923,7 @@
 				FE752F7E212D43810082B096 /* Storyboads.swift in Sources */,
 				FE752F3A212D3BB70082B096 /* Page.swift in Sources */,
 				FEECD044212E413800421577 /* FontConstant.swift in Sources */,
+				521A57F42137C1CF00369986 /* Layer+.swift in Sources */,
 				FE752F41212D3BF60082B096 /* ValidationError.swift in Sources */,
 				C918E082213629CA00F68F05 /* CartViewModel.swift in Sources */,
 				FE752F89212D63DA0082B096 /* String+.swift in Sources */,

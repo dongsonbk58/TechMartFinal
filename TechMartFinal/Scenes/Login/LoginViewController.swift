@@ -33,6 +33,23 @@ class LoginViewController: UIViewController, BindableType {
     override func viewWillAppear(_ animated: Bool) {
         navigationController?.isNavigationBarHidden = true
         setTitleForComponent()
+        configView()
+    }
+    
+    func configView() {
+        loginButton.do {
+            $0.layer
+                .setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                      UIColor.colorWithHexaCode("f26726"),
+                                      isCorner: true)
+        }
+        
+        signupButton.do {
+            $0.layer
+                .setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                      UIColor.colorWithHexaCode("f26726"),
+                                      isCorner: true)
+        }
     }
     
     func setTitleForComponent() {

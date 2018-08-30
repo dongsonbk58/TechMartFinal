@@ -12,15 +12,10 @@ extension Reactive where Base: UIViewController {
     var isLoading: Binder<Bool> {
         return Binder(base) { viewController, isLoading in
             if isLoading {
-                MKProgress.config.hudType = .radial
-                MKProgress.config.hudColor = .black
-                MKProgress.config.circleBorderColor = UIColor.white
-                MKProgress.config.logoImage = #imageLiteral(resourceName: "logo")
-                MKProgress.show()
+                let hud = MBProgressHUD.showAdded(to: viewController.view, animated: true)
+                hud.offset.y = -30
             } else {
-                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) {
-                    MKProgress.hide()
-                }
+                MBProgressHUD.hide(for: viewController.view, animated: true)
             }
         }
     }

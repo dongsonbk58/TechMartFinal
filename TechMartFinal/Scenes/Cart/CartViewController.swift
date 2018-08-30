@@ -9,7 +9,9 @@
 import UIKit
 
 class CartViewController: UIViewController, BindableType {
-
+    @IBOutlet weak var buyButton: UIButton!
+    @IBOutlet weak var costCountLabel: UILabel!
+    
     var viewModel: CartViewModel!
     var refreshData = PublishSubject<Void>()
     var decProduct = PublishSubject<IndexPath>()
@@ -40,10 +42,19 @@ class CartViewController: UIViewController, BindableType {
 
     func configUI() {
         title = "Cart"
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.font: UIFont(name: "CaviarDreams", size: 20)!]
         cartTableView.do {
             $0.register(cellType: CartTableViewCell.self)
             $0.addSubview(self.refreshControl)
-            $0.rowHeight = 100
+            $0.rowHeight = 80
+        }
+        
+        buyButton.do {
+            $0.layer.cornerRadius = 5
+            $0.layer
+                .setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                      UIColor.colorWithHexaCode("f26726"),
+                                      isCorner: true)
         }
     }
     

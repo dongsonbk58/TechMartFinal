@@ -51,7 +51,7 @@ struct DetailProductionViewModel:ViewModelType {
     
     private func configDataSource() -> [SectionInfo] {
         let section:[SectionInfo] = [SectionInfo(identifier: "", cells: [
-                CellInfo(type: .imageDetail),
+            CellInfo(type: .imageDetail)]), SectionInfo(identifier: "", cells: [
                 CellInfo(type: .countProduct)])]
         return section
     }
