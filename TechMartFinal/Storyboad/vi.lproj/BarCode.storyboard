@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bar Code View Controller-->
+        <scene sceneID="ZCG-ll-NJu">
+            <objects>
+                <viewController id="f9x-D4-SoM" customClass="BarCodeViewController" customModule="TechMartFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iif-1R-oej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="spZ-9r-6B0">
+                                <rect key="frame" x="0.0" y="243.5" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="spZ-9r-6B0" secondAttribute="height" multiplier="15:8" id="jL8-a3-0gO"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="spZ-9r-6B0" firstAttribute="centerX" secondItem="on3-9q-Axy" secondAttribute="centerX" id="3Dv-9h-qr9"/>
+                            <constraint firstItem="spZ-9r-6B0" firstAttribute="centerY" secondItem="on3-9q-Axy" secondAttribute="centerY" id="8dA-k7-t0c"/>
+                            <constraint firstItem="spZ-9r-6B0" firstAttribute="width" secondItem="Iif-1R-oej" secondAttribute="width" id="DIC-UN-34e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="on3-9q-Axy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fA-jB-KWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="74.212893553223395"/>
+        </scene>
+    </scenes>
+</document>

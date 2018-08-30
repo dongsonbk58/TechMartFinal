@@ -62,6 +62,12 @@ struct OtherViewModel: ViewModelType {
             }
             .unwrap()
             .do(onNext: { menu in
+                switch menu.type {
+                case .barCode:
+                    self.navigator.toBarCode()
+                case .map, .settings, .updateProfile:
+                    break
+                }
                 print(menu.type.title)
             })
         

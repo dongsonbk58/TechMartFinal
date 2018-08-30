@@ -33,38 +33,6 @@
             endingLineNumber = "74"
             landmarkName = "checkValid"
             landmarkType = "24">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "TechMartFinal.SignUpViewController.(checkValid in _540EAFD2F0701A9A84CD448B81585B1F).getter : RxCocoa.Binder&lt;(Swift.Bool, Swift.String)&gt;"
-                  moduleName = "TechMartFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbook/Desktop/TechMartFinal/TechMartFinal/Scenes/SignUp/SignUpViewController.swift"
-                  timestampString = "557247248.913756"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "12">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (TechMartFinal.SignUpViewController, (Swift.Bool, Swift.String)) -&gt; () in TechMartFinal.SignUpViewController.(checkValid in _540EAFD2F0701A9A84CD448B81585B1F).getter : RxCocoa.Binder&lt;(Swift.Bool, Swift.String)&gt;"
-                  moduleName = "TechMartFinal"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/macbook/Desktop/TechMartFinal/TechMartFinal/Scenes/SignUp/SignUpViewController.swift"
-                  timestampString = "557247248.918771"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "75"
-                  endingLineNumber = "75"
-                  offsetFromSymbolStart = "40">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -80,6 +48,38 @@
             startingLineNumber = "73"
             endingLineNumber = "73"
             landmarkName = "transform(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TechMartFinal/Scenes/BarCode/BarCodeNavigator.swift"
+            timestampString = "557336587.586722"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "confirmGoDetailProduct(idProduct:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TechMartFinal/Scenes/BarCode/BarCodeViewController.swift"
+            timestampString = "557336587.588403"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "metadataOutput(_:didOutput:from:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Bar Code View Controller-->
+        <scene sceneID="ZCG-ll-NJu">
+            <objects>
+                <viewController storyboardIdentifier="BarCodeViewController" id="f9x-D4-SoM" customClass="BarCodeViewController" customModule="TechMartFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Iif-1R-oej">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="scan" translatesAutoresizingMaskIntoConstraints="NO" id="hdN-OJ-y5D">
+                                <rect key="frame" x="63" y="219" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="hdN-OJ-y5D" secondAttribute="height" id="kPK-t5-qub"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hdN-OJ-y5D" firstAttribute="centerX" secondItem="on3-9q-Axy" secondAttribute="centerX" id="7Oi-CZ-AD2"/>
+                            <constraint firstItem="hdN-OJ-y5D" firstAttribute="width" secondItem="Iif-1R-oej" secondAttribute="width" multiplier="2/3" id="GeB-MR-cfM"/>
+                            <constraint firstItem="hdN-OJ-y5D" firstAttribute="centerY" secondItem="on3-9q-Axy" secondAttribute="centerY" id="wqy-Cd-thI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="on3-9q-Axy"/>
+                    </view>
+                    <connections>
+                        <outlet property="scanImageView" destination="hdN-OJ-y5D" id="YSd-qN-gvC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fA-jB-KWV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="172" y="75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="scan" width="512" height="512"/>
+    </resources>
+</document>

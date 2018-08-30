@@ -10,6 +10,7 @@ import Foundation
 
 protocol OtherNavigatorType {
     func toOther()
+    func toBarCode()
 }
 
 struct OtherNavigator: OtherNavigatorType {
@@ -21,5 +22,10 @@ struct OtherNavigator: OtherNavigatorType {
                                 useCase: OtherUseCase())
         vc.bindViewModel(to: vm)
         navigationController.pushViewController(vc, animated: false)
+    }
+    
+    func toBarCode() {
+        let navigation = BarCodeNavigator(navigationController: navigationController)
+        navigation.toBarCode()
     }
 }

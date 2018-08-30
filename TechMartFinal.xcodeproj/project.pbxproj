@@ -35,9 +35,9 @@
 		521A57ED21377F5500369986 /* CountProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57EB21377F5500369986 /* CountProductTableViewCell.swift */; };
 		521A57EE21377F5500369986 /* CountProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521A57EC21377F5500369986 /* CountProductTableViewCell.xib */; };
 		521A57EF21379AE200369986 /* Production.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A57F121379AE200369986 /* Production.storyboard */; };
+		521A57F42137C1CF00369986 /* Layer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57F32137C1CF00369986 /* Layer+.swift */; };
 		C90BD3622137C42900A95E95 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */; };
 		C90BD3632137C42900A95E95 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */; };
-		521A57F42137C1CF00369986 /* Layer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57F32137C1CF00369986 /* Layer+.swift */; };
 		C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0762134D5D600F68F05 /* HomePageViewController.swift */; };
 		C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */; };
 		C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */; };
@@ -109,6 +109,11 @@
 		FE752FA5212DBB210082B096 /* ForgotPasswordUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE752FA4212DBB210082B096 /* ForgotPasswordUseCase.swift */; };
 		FE752FA7212DBB300082B096 /* ForgotPasswordNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE752FA6212DBB300082B096 /* ForgotPasswordNavigator.swift */; };
 		FE752FAA212DBFBC0082B096 /* ForgotPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE752FAC212DBFBC0082B096 /* ForgotPasswordViewController.xib */; };
+		FEE5823A21382D83004EA52A /* BarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5823921382D83004EA52A /* BarCodeViewController.swift */; };
+		FEE5823C21382DB4004EA52A /* BarCodeUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5823B21382DB4004EA52A /* BarCodeUseCase.swift */; };
+		FEE5823E21382DD5004EA52A /* BarCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5823D21382DD5004EA52A /* BarCodeViewModel.swift */; };
+		FEE5824021382DE1004EA52A /* BarCodeNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE5823F21382DE1004EA52A /* BarCodeNavigator.swift */; };
+		FEE5824121382F27004EA52A /* BarCode.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE5824321382F27004EA52A /* BarCode.storyboard */; };
 		FEECD013212E3FF400421577 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEECD012212E3FF400421577 /* UIView+.swift */; };
 		FEECD016212E404200421577 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEECD015212E404200421577 /* Constants.swift */; };
 		FEECD018212E407C00421577 /* ColorConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEECD017212E407C00421577 /* ColorConstant.swift */; };
@@ -259,6 +264,12 @@
 		FE752FA6212DBB300082B096 /* ForgotPasswordNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordNavigator.swift; sourceTree = "<group>"; };
 		FE752FAB212DBFBC0082B096 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ForgotPasswordViewController.xib; sourceTree = "<group>"; };
 		FE752FAD212DBFBE0082B096 /* vi */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = vi; path = vi.lproj/ForgotPasswordViewController.xib; sourceTree = "<group>"; };
+		FEE5823921382D83004EA52A /* BarCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeViewController.swift; sourceTree = "<group>"; };
+		FEE5823B21382DB4004EA52A /* BarCodeUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeUseCase.swift; sourceTree = "<group>"; };
+		FEE5823D21382DD5004EA52A /* BarCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeViewModel.swift; sourceTree = "<group>"; };
+		FEE5823F21382DE1004EA52A /* BarCodeNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeNavigator.swift; sourceTree = "<group>"; };
+		FEE5824221382F27004EA52A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/BarCode.storyboard; sourceTree = "<group>"; };
+		FEE5824421382F29004EA52A /* vi */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = vi; path = vi.lproj/BarCode.storyboard; sourceTree = "<group>"; };
 		FEECD012212E3FF400421577 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		FEECD015212E404200421577 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FEECD017212E407C00421577 /* ColorConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorConstant.swift; sourceTree = "<group>"; };
@@ -657,6 +668,7 @@
 				FEECD049212E539B00421577 /* ProfileViewController.xib */,
 				FEECD058212E885F00421577 /* Home.storyboard */,
 				521A57F121379AE200369986 /* Production.storyboard */,
+				FEE5824321382F27004EA52A /* BarCode.storyboard */,
 			);
 			path = Storyboad;
 			sourceTree = "<group>";
@@ -664,6 +676,7 @@
 		FE752F58212D3CF50082B096 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				FEE5823621382C88004EA52A /* BarCode */,
 				FE1BD4C32136EAA60050D86E /* Favorite */,
 				521A57DB2136443400369986 /* DetailProduction */,
 				C918E07E2136299500F68F05 /* Cart */,
@@ -742,6 +755,17 @@
 				FEECD051212E561E00421577 /* ProfileViewController.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		FEE5823621382C88004EA52A /* BarCode */ = {
+			isa = PBXGroup;
+			children = (
+				FEE5823921382D83004EA52A /* BarCodeViewController.swift */,
+				FEE5823B21382DB4004EA52A /* BarCodeUseCase.swift */,
+				FEE5823D21382DD5004EA52A /* BarCodeViewModel.swift */,
+				FEE5823F21382DE1004EA52A /* BarCodeNavigator.swift */,
+			);
+			path = BarCode;
 			sourceTree = "<group>";
 		};
 		FEECD014212E403400421577 /* Ultis */ = {
@@ -836,6 +860,7 @@
 				FE752FAA212DBFBC0082B096 /* ForgotPasswordViewController.xib in Resources */,
 				521A57B62134E70400369986 /* UserProfileView.xib in Resources */,
 				FE752F72212D42440082B096 /* Localizable.strings in Resources */,
+				FEE5824121382F27004EA52A /* BarCode.storyboard in Resources */,
 				C918E08D2136379500F68F05 /* CartTableViewCell.xib in Resources */,
 				FE752EFE212D389F0082B096 /* Assets.xcassets in Resources */,
 				FE752F66212D41AB0082B096 /* LaunchScreen.storyboard in Resources */,
@@ -951,6 +976,7 @@
 				FEECD031212E40F900421577 /* UIApplication.swift in Sources */,
 				521A57E32136460100369986 /* DetailProductionNavigator.swift in Sources */,
 				FEECD05D212E897400421577 /* MainViewModel.swift in Sources */,
+				FEE5823C21382DB4004EA52A /* BarCodeUseCase.swift in Sources */,
 				FE752F79212D42B40082B096 /* AppUseCase.swift in Sources */,
 				FEECD05F212E897F00421577 /* MainUseCase.swift in Sources */,
 				FEECD032212E40F900421577 /* UIBarButtonItem.swift in Sources */,
@@ -965,6 +991,7 @@
 				FEECD041212E40F900421577 /* UIViewControllerExtendsion.swift in Sources */,
 				FEECD04E212E55BB00421577 /* ProfileUseCase.swift in Sources */,
 				C918E08821362E3200F68F05 /* Product.swift in Sources */,
+				FEE5823E21382DD5004EA52A /* BarCodeViewModel.swift in Sources */,
 				FEECD042212E40F900421577 /* URLRequest.swift in Sources */,
 				FE1BD4C72136EB7F0050D86E /* FavoriteViewModel.swift in Sources */,
 				521A57B72134E70400369986 /* UserProfileView.swift in Sources */,
@@ -989,6 +1016,7 @@
 				FE752F13212D3AFF0082B096 /* ErrorTracker.swift in Sources */,
 				FE752FA5212DBB210082B096 /* ForgotPasswordUseCase.swift in Sources */,
 				FEECD03C212E40F900421577 /* UITextField.swift in Sources */,
+				FEE5824021382DE1004EA52A /* BarCodeNavigator.swift in Sources */,
 				C918E07D2134DFAA00F68F05 /* HomePageUseCase.swift in Sources */,
 				521A57D82135341600369986 /* UIFont+Alignment.m in Sources */,
 				FEECD03F212E40F900421577 /* UILabel.swift in Sources */,
@@ -1002,6 +1030,7 @@
 				FE752FA3212DBAA40082B096 /* ForgotPasswordViewModel.swift in Sources */,
 				521A57E1213645EC00369986 /* DetailProductionViewModel.swift in Sources */,
 				C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */,
+				FEE5823A21382D83004EA52A /* BarCodeViewController.swift in Sources */,
 				FEECD039212E40F900421577 /* CAShapeLayer.swift in Sources */,
 				521A57A82134E3C200369986 /* OtherViewController.swift in Sources */,
 				FEECD013212E3FF400421577 /* UIView+.swift in Sources */,
@@ -1110,6 +1139,15 @@
 				FE752FAD212DBFBE0082B096 /* vi */,
 			);
 			name = ForgotPasswordViewController.xib;
+			sourceTree = "<group>";
+		};
+		FEE5824321382F27004EA52A /* BarCode.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FEE5824221382F27004EA52A /* en */,
+				FEE5824421382F29004EA52A /* vi */,
+			);
+			name = BarCode.storyboard;
 			sourceTree = "<group>";
 		};
 		FEECD049212E539B00421577 /* ProfileViewController.xib */ = {

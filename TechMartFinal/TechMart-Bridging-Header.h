@@ -23,3 +23,4 @@
 @import FSPagerView;
 @import ObjectMapper;
 @import MBProgressHUD;
+@import AVFoundation;
