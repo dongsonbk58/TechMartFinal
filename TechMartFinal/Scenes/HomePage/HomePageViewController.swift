@@ -29,7 +29,7 @@ class HomePageViewController: UIViewController, BindableType {
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0,
                                                                width: self.view.frame.size.width,
                                                                height: 5))
-    fileprivate let imageNames = ["slider1", "slider2"]
+    fileprivate let imageNames = ["slider3", "slider2"]
     fileprivate var numberOfItems = 2
     
     override func viewDidLoad() {
@@ -40,8 +40,8 @@ class HomePageViewController: UIViewController, BindableType {
     func configView() {
         title = "Home"
         searchBar.placeholder = "Nhập để tìm kiếm..."
-        searchBar.barStyle = UIBarStyle.black
-        searchBar.tintColor = UIColor.white
+        searchBar.barStyle = UIBarStyle.default
+        searchBar.tintColor = UIColor.black
         let leftNavBarButton = UIBarButtonItem(customView:searchBar)
         self.navigationItem.rightBarButtonItem = leftNavBarButton
         self.pagerView.automaticSlidingInterval = 3.0 - self.pagerView.automaticSlidingInterval

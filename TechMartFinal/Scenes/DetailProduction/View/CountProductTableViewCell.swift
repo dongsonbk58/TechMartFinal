@@ -20,21 +20,10 @@ class CountProductTableViewCell: UITableViewCell, NibReusable {
     }
     
     func configView() {
-        countTitleLabel.do {
-            $0.layer.borderWidth = 1
-            $0.layer.borderColor = UIColor.black.cgColor
+        countProductLabel.do {
             $0.font = UIFont.hiraginoSans(size: 15)
         }
-        
-        decreaseButton.do {
-            $0.layer.borderWidth = 1
-            $0.layer.borderColor = UIColor.black.cgColor
-        }
-        
-        increaseButton.do {
-            $0.layer.borderWidth = 1
-            $0.layer.borderColor = UIColor.black.cgColor
-        }
+
     }
     
     func configData() {

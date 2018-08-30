@@ -30,8 +30,17 @@ class SignUpViewController: UIViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configView()
     }
     
+    func configView() {
+        signUpButton.do {
+            $0.layer
+                .setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                      UIColor.colorWithHexaCode("f26726"),
+                                      isCorner: true)
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         emailTextField.text = ""
         passwordTextField.text = ""

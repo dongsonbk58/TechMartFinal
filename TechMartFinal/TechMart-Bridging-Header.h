@@ -20,6 +20,6 @@
 @import Localize_Swift;
 @import StatusBarNotifications;
 @import RxGesture;
-@import MKProgress;
 @import FSPagerView;
 @import ObjectMapper;
+@import MBProgressHUD;

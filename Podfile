@@ -33,7 +33,7 @@ target 'TechMartFinal' do
   pod 'RxGesture'
   
   #
-  pod 'MKProgress'
+  pod 'MBProgressHUD'
   pod 'SDWebImage', '~> 4.4'
   pod 'ActionSheetPicker-3.0', '~> 2.3'
 
