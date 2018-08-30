@@ -30,10 +30,20 @@ class ProfileViewController: UIViewController, BindableType {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configView()
     }
     
     override func viewWillLayoutSubviews() {
         setupAvatarImageView()
+    }
+    
+    func configView() {
+        okButton.do {
+            $0.layer
+                .setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                      UIColor.colorWithHexaCode("f26726"),
+                                      isCorner: true)
+        }
     }
     
     func setupAvatarImageView() {
@@ -68,12 +78,12 @@ class ProfileViewController: UIViewController, BindableType {
     
     private var pickerViewBinder: Binder<Void> {
         return Binder(self, binding: { vc, _  in
-            MKProgress.show()
+            MBProgressHUD.showAdded(to: vc.view, animated: true)
             let picker = UIImagePickerController()
             picker.delegate = self
             picker.allowsEditing = true
             vc.present(picker, animated: true, completion: {
-                MKProgress.hide()
+                MBProgressHUD.hide(for: vc.view, animated: true)
             })
         })
     }

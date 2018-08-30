@@ -15,7 +15,7 @@ class BaseNavigationController: UINavigationController {
         
         navigationBar.do {
             $0.tintColor = UIColor.white
-            $0.barTintColor = UIColor.black
+            $0.barTintColor = UIColor.red
             $0.titleTextAttributes = [
                 NSAttributedStringKey.font: UIFont.systemFont(ofSize: 15),
                 NSAttributedStringKey.foregroundColor: UIColor.white

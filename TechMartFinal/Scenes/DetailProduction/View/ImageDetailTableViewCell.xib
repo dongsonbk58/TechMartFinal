@@ -12,69 +12,74 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageDetailTableViewCell" rowHeight="326" id="KGk-i7-Jjw" customClass="ImageDetailTableViewCell" customModule="TechMartFinal" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="368" height="326"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ImageDetailTableViewCell" rowHeight="292" id="KGk-i7-Jjw" customClass="ImageDetailTableViewCell" customModule="TechMartFinal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="368" height="292"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="368" height="325.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="368" height="291.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-Pb-qPH" customClass="FSPagerView" customModule="FSPagerView">
-                        <rect key="frame" x="0.0" y="0.0" width="368" height="240"/>
+                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="f8q-Pb-qPH" customClass="FSPagerView" customModule="FSPagerView">
+                        <rect key="frame" x="0.0" y="0.0" width="368" height="220"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="240" id="0Al-78-NH1"/>
+                            <constraint firstAttribute="height" constant="220" id="0Al-78-NH1"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="058-V1-zFV" customClass="FSPageControl" customModule="FSPagerView">
-                        <rect key="frame" x="0.0" y="210" width="368" height="30"/>
+                        <rect key="frame" x="0.0" y="198" width="368" height="30"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="30" id="gtQ-Sw-I8h"/>
                         </constraints>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="255.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbq-yi-uTv">
-                        <rect key="frame" x="8" y="248" width="352" height="26"/>
+                        <rect key="frame" x="8" y="228" width="352" height="26"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="26" id="hex-R5-DU3"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="giá cũ: 290.000đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2T-Tf-msq">
-                        <rect key="frame" x="8" y="279" width="130" height="26"/>
+                        <rect key="frame" x="8" y="254" width="103" height="26"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="26" id="1co-04-bk7"/>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="oP9-Lg-5H9"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-14%" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="et3-3u-L7B">
-                        <rect key="frame" x="153" y="282" width="50" height="21"/>
+                        <rect key="frame" x="116" y="259" width="50" height="16"/>
                         <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="wEz-70-mGV"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Lbq-yi-uTv" firstAttribute="top" secondItem="058-V1-zFV" secondAttribute="bottom" constant="8" id="36V-zi-83X"/>
+                    <constraint firstItem="Lbq-yi-uTv" firstAttribute="top" secondItem="058-V1-zFV" secondAttribute="bottom" id="36V-zi-83X"/>
                     <constraint firstItem="et3-3u-L7B" firstAttribute="centerY" secondItem="g2T-Tf-msq" secondAttribute="centerY" id="9GA-zi-3tO"/>
                     <constraint firstAttribute="trailing" secondItem="f8q-Pb-qPH" secondAttribute="trailing" id="KrE-fO-Ux9"/>
                     <constraint firstAttribute="trailing" secondItem="Lbq-yi-uTv" secondAttribute="trailing" constant="8" id="LVy-e2-eix"/>
                     <constraint firstItem="g2T-Tf-msq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Lxz-w1-Voi"/>
-                    <constraint firstItem="g2T-Tf-msq" firstAttribute="top" secondItem="Lbq-yi-uTv" secondAttribute="bottom" constant="5" id="Vpf-If-m8w"/>
+                    <constraint firstItem="g2T-Tf-msq" firstAttribute="top" secondItem="Lbq-yi-uTv" secondAttribute="bottom" id="Vpf-If-m8w"/>
                     <constraint firstItem="Lbq-yi-uTv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="Y9z-rK-mux"/>
-                    <constraint firstItem="et3-3u-L7B" firstAttribute="leading" secondItem="g2T-Tf-msq" secondAttribute="trailing" constant="15" id="Yk0-5P-GXU"/>
-                    <constraint firstAttribute="bottom" secondItem="g2T-Tf-msq" secondAttribute="bottom" constant="20.5" id="f1F-cj-c1i"/>
+                    <constraint firstItem="et3-3u-L7B" firstAttribute="leading" secondItem="g2T-Tf-msq" secondAttribute="trailing" constant="5" id="Yk0-5P-GXU"/>
                     <constraint firstItem="f8q-Pb-qPH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="jTn-ei-70h"/>
                     <constraint firstAttribute="trailing" secondItem="058-V1-zFV" secondAttribute="trailing" id="jcT-Lj-TCD"/>
+                    <constraint firstAttribute="bottom" secondItem="g2T-Tf-msq" secondAttribute="bottom" constant="11.5" id="mmC-7Q-gpI"/>
                     <constraint firstItem="f8q-Pb-qPH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ouc-H3-I4O"/>
                     <constraint firstItem="Lbq-yi-uTv" firstAttribute="top" secondItem="f8q-Pb-qPH" secondAttribute="bottom" constant="8" id="po6-nB-gah"/>
                     <constraint firstItem="058-V1-zFV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="uAh-cT-gHY"/>
@@ -88,7 +93,7 @@
                 <outlet property="pagerView" destination="f8q-Pb-qPH" id="3Ao-uz-F3v"/>
                 <outlet property="salePecentLabel" destination="et3-3u-L7B" id="xG2-tm-H98"/>
             </connections>
-            <point key="canvasLocation" x="-18" y="-25"/>
+            <point key="canvasLocation" x="-18" y="-42"/>
         </tableViewCell>
     </objects>
 </document>

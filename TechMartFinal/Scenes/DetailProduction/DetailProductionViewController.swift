@@ -60,9 +60,6 @@ class DetailProductionViewController: UIViewController, BindableType {
                     cell = cellInfo
                 }
                 return cell
-            },
-            titleForHeaderInSection: { dataSource, section in
-                return dataSource.sectionModels[section].identity
             }
         )
         
@@ -75,9 +72,6 @@ class DetailProductionViewController: UIViewController, BindableType {
     }
     
     func configView() {
-        addToCartButton.do {
-            $0.layer.cornerRadius = 2
-        }
         navigationItem.title = "Detail product"
         
         tableView?.do { [weak self] in
@@ -85,6 +79,15 @@ class DetailProductionViewController: UIViewController, BindableType {
             $0.register(cellType: ImageDetailTableViewCell.self)
             $0.register(cellType: CountProductTableViewCell.self)
             $0.delegate = self
+        }
+        
+        addToCartButton.do {
+            $0.layer.cornerRadius = 5
+            $0.layer
+            .setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                UIColor.colorWithHexaCode("f26726"),
+                                isCorner: true)
+            $0.setImage(#imageLiteral(resourceName: "cart") , for: .normal)
         }
     }
 }
@@ -94,5 +97,16 @@ extension DetailProductionViewController: StoryboardSceneBased {
 }
 
 extension DetailProductionViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 5
+    }
     
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 0.001
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

@@ -9,7 +9,7 @@
 import UIKit
 
 class ImageDetailTableViewCell: UITableViewCell, NibReusable {
-    fileprivate let imageNames = ["slider1", "slider2"]
+    fileprivate let imageNames = ["slider3", "slider2"]
     fileprivate var numberOfItems = 2
     
     @IBOutlet private weak var pagerView: FSPagerView! {
@@ -21,7 +21,7 @@ class ImageDetailTableViewCell: UITableViewCell, NibReusable {
     @IBOutlet private weak var pageControl: FSPageControl! {
         didSet {
             self.pageControl.numberOfPages = self.imageNames.count
-            self.pageControl.contentHorizontalAlignment = .right
+            self.pageControl.contentHorizontalAlignment = .center
             self.pageControl.contentInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
         }
     }
@@ -43,8 +43,8 @@ class ImageDetailTableViewCell: UITableViewCell, NibReusable {
         self.pagerView.itemSize = self.pagerView.frame.size.applying(CGAffineTransform(scaleX: newScale, y: newScale))
         
         salePecentLabel.do {
-            $0.font = UIFont.hiraginoSans(size: 15.0)
-            $0.layer.cornerRadius = 2
+            $0.font = UIFont.hiraginoSans(size: 13.0)
+            $0.layer.cornerRadius = 4
         }
     }
 }

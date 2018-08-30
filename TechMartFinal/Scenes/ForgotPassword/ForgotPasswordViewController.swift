@@ -18,6 +18,7 @@ private struct Constant {
 
 class ForgotPasswordViewController: UIViewController, BindableType {
 
+    @IBOutlet weak private var backgroundView: UIView!
     @IBOutlet weak private var backButton: UIButton!
     @IBOutlet weak private var bacgroundLockView: UIView!
     @IBOutlet weak private var lockImageView: UIImageView!
@@ -30,6 +31,19 @@ class ForgotPasswordViewController: UIViewController, BindableType {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLanguage()
+        configView()
+    }
+    
+    func configView() {
+        resetPasswordButon.do {
+            $0.layer
+                .setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                      UIColor.colorWithHexaCode("f26726"),
+                                      isCorner: true)
+        }
+        backgroundView.setGradientForUIView(UIColor.colorWithHexaCode("ed0000"),
+                                            UIColor.colorWithHexaCode("f26726"),
+                                            isCorner: false)
     }
     
     override func viewDidLayoutSubviews() {

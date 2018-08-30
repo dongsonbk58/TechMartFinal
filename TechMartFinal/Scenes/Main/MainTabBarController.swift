@@ -12,7 +12,10 @@ final class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-      //  self.tabBarItem.
+        tabBar.barTintColor = UIColor.white
+        tabBar.tintColor = .red
+        tabBar.layer.borderWidth = 1
+        tabBar.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {

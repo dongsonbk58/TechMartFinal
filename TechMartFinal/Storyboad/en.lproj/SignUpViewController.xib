@@ -66,12 +66,6 @@
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="10"/>
                         </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
-                            <integer key="value" value="1"/>
-                        </userDefinedRuntimeAttribute>
-                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
-                            <color key="value" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" placeholder="Email" textAlignment="natural" minimumFontSize="14" translatesAutoresizingMaskIntoConstraints="NO" id="VoS-ut-aLL" customClass="HoshiTextField" customModule="TextFieldEffects">
@@ -148,7 +142,7 @@
                 <constraint firstItem="pkU-hF-Gku" firstAttribute="centerX" secondItem="Is9-Mn-lUc" secondAttribute="centerX" id="UTE-gM-gHu"/>
                 <constraint firstItem="pTJ-d4-pmN" firstAttribute="leading" secondItem="Is9-Mn-lUc" secondAttribute="leading" constant="10" id="VRc-al-14Q"/>
                 <constraint firstItem="zj2-Up-Su1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="cVr-zq-gxO"/>
-                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="VoS-ut-aLL" secondAttribute="trailing" constant="10" id="eBl-L8-8FV"/>
+                <constraint firstAttribute="trailing" secondItem="VoS-ut-aLL" secondAttribute="trailing" constant="10" id="eBl-L8-8FV"/>
                 <constraint firstItem="pkU-hF-Gku" firstAttribute="top" secondItem="SKm-q3-ATI" secondAttribute="bottom" constant="50" id="et9-wu-q9H"/>
                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="n1e-2c-vz2" secondAttribute="trailing" constant="10" id="f6S-SH-gQH"/>
                 <constraint firstItem="n1e-2c-vz2" firstAttribute="leading" secondItem="VoS-ut-aLL" secondAttribute="leading" id="hDL-RY-PU6"/>
