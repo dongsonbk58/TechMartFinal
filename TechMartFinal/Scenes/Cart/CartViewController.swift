@@ -11,6 +11,7 @@ import UIKit
 class CartViewController: UIViewController, BindableType {
     @IBOutlet weak var buyButton: UIButton!
     @IBOutlet weak var costCountLabel: UILabel!
+    @IBOutlet weak var cartTableView: UITableView!
     
     var viewModel: CartViewModel!
     var refreshData = PublishSubject<Void>()
@@ -28,8 +29,6 @@ class CartViewController: UIViewController, BindableType {
         
         return refreshControl
     }()
-    
-    @IBOutlet weak var cartTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -121,7 +120,7 @@ class CartViewController: UIViewController, BindableType {
     
     private var refreshBinding: Binder<Void> {
         return Binder(self, binding: { vc, _ in
-            vc.cartTableView.reloadData()
+            vc.loadTrigger.onNext(())
             vc.refreshControl.endRefreshing()
         })
     }
