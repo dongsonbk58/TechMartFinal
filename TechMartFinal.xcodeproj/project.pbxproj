@@ -38,6 +38,12 @@
 		521A57F42137C1CF00369986 /* Layer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57F32137C1CF00369986 /* Layer+.swift */; };
 		C90BD3622137C42900A95E95 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */; };
 		C90BD3632137C42900A95E95 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */; };
+		C90BD36721391D4800A95E95 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90BD36921391D4800A95E95 /* Map.storyboard */; };
+		C90BD36C21391D6600A95E95 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD36B21391D6600A95E95 /* MapViewController.swift */; };
+		C90BD36E21391D9100A95E95 /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD36D21391D9100A95E95 /* MapViewModel.swift */; };
+		C90BD37021391D9C00A95E95 /* MapUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD36F21391D9C00A95E95 /* MapUseCase.swift */; };
+		C90BD37221391DA900A95E95 /* MapNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD37121391DA900A95E95 /* MapNavigator.swift */; };
+		C90BD3742139361A00A95E95 /* PlaceData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD3732139361A00A95E95 /* PlaceData.swift */; };
 		C918E0772134D5D600F68F05 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0762134D5D600F68F05 /* HomePageViewController.swift */; };
 		C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */; };
 		C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */; };
@@ -184,6 +190,13 @@
 		7F4575CF6E8C0103D0810FCB /* Pods-TechMartFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
+		C90BD36821391D4800A95E95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
+		C90BD36A21391D4A00A95E95 /* vi */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = vi; path = vi.lproj/Map.storyboard; sourceTree = "<group>"; };
+		C90BD36B21391D6600A95E95 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		C90BD36D21391D9100A95E95 /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		C90BD36F21391D9C00A95E95 /* MapUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapUseCase.swift; sourceTree = "<group>"; };
+		C90BD37121391DA900A95E95 /* MapNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapNavigator.swift; sourceTree = "<group>"; };
+		C90BD3732139361A00A95E95 /* PlaceData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceData.swift; sourceTree = "<group>"; };
 		C918E0762134D5D600F68F05 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		C918E0782134D9DC00F68F05 /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		C918E07A2134DF9C00F68F05 /* HomePageNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageNavigator.swift; sourceTree = "<group>"; };
@@ -409,6 +422,18 @@
 			path = FavoriteTableViewCell;
 			sourceTree = "<group>";
 		};
+		C90BD36421391C8500A95E95 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C90BD36B21391D6600A95E95 /* MapViewController.swift */,
+				C90BD36D21391D9100A95E95 /* MapViewModel.swift */,
+				C90BD36F21391D9C00A95E95 /* MapUseCase.swift */,
+				C90BD37121391DA900A95E95 /* MapNavigator.swift */,
+			);
+			name = Map;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		C918E0752134D5C200F68F05 /* HomePage */ = {
 			isa = PBXGroup;
 			children = (
@@ -621,6 +646,7 @@
 				C918E08721362E3200F68F05 /* Product.swift */,
 				521A57BA2134F4FB00369986 /* BaseModel.swift */,
 				FE1BD4C12136DF760050D86E /* Cart.swift */,
+				C90BD3732139361A00A95E95 /* PlaceData.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -669,6 +695,7 @@
 				FEECD058212E885F00421577 /* Home.storyboard */,
 				521A57F121379AE200369986 /* Production.storyboard */,
 				FEE5824321382F27004EA52A /* BarCode.storyboard */,
+				C90BD36921391D4800A95E95 /* Map.storyboard */,
 			);
 			path = Storyboad;
 			sourceTree = "<group>";
@@ -676,6 +703,7 @@
 		FE752F58212D3CF50082B096 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				C90BD36421391C8500A95E95 /* Map */,
 				FEE5823621382C88004EA52A /* BarCode */,
 				FE1BD4C32136EAA60050D86E /* Favorite */,
 				521A57DB2136443400369986 /* DetailProduction */,
@@ -803,6 +831,7 @@
 				FE752EED212D389C0082B096 /* Frameworks */,
 				FE752EEE212D389C0082B096 /* Resources */,
 				82D50527F1C42AFF37F37DB1 /* [CP] Embed Pods Frameworks */,
+				2AA09107652C8B80BC1D839B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -861,6 +890,7 @@
 				521A57B62134E70400369986 /* UserProfileView.xib in Resources */,
 				FE752F72212D42440082B096 /* Localizable.strings in Resources */,
 				FEE5824121382F27004EA52A /* BarCode.storyboard in Resources */,
+				C90BD36721391D4800A95E95 /* Map.storyboard in Resources */,
 				C918E08D2136379500F68F05 /* CartTableViewCell.xib in Resources */,
 				FE752EFE212D389F0082B096 /* Assets.xcassets in Resources */,
 				FE752F66212D41AB0082B096 /* LaunchScreen.storyboard in Resources */,
@@ -889,6 +919,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AA09107652C8B80BC1D839B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		82D50527F1C42AFF37F37DB1 /* [CP] Embed Pods Frameworks */ = {
@@ -970,6 +1022,7 @@
 				C918E084213629DA00F68F05 /* CartUseCase.swift in Sources */,
 				FE752F4A212D3C0B0082B096 /* APIUrls.swift in Sources */,
 				FEECD038212E40F900421577 /* UIImage.swift in Sources */,
+				C90BD37221391DA900A95E95 /* MapNavigator.swift in Sources */,
 				521A57ED21377F5500369986 /* CountProductTableViewCell.swift in Sources */,
 				FE752F3D212D3BC70082B096 /* Observable+.swift in Sources */,
 				FE752F1D212D3B420082B096 /* RefreshTableView.swift in Sources */,
@@ -989,6 +1042,7 @@
 				521A57BD2135049500369986 /* TabBarItemType.swift in Sources */,
 				FE752F16212D3B120082B096 /* UIViewController+Debug.swift in Sources */,
 				FEECD041212E40F900421577 /* UIViewControllerExtendsion.swift in Sources */,
+				C90BD36C21391D6600A95E95 /* MapViewController.swift in Sources */,
 				FEECD04E212E55BB00421577 /* ProfileUseCase.swift in Sources */,
 				C918E08821362E3200F68F05 /* Product.swift in Sources */,
 				FEE5823E21382DD5004EA52A /* BarCodeViewModel.swift in Sources */,
@@ -1013,6 +1067,7 @@
 				FE752F85212D4ACA0082B096 /* LoginUseCase.swift in Sources */,
 				FEECD01A212E409700421577 /* TimeUtils.swift in Sources */,
 				FEECD03E212E40F900421577 /* Float.swift in Sources */,
+				C90BD36E21391D9100A95E95 /* MapViewModel.swift in Sources */,
 				FE752F13212D3AFF0082B096 /* ErrorTracker.swift in Sources */,
 				FE752FA5212DBB210082B096 /* ForgotPasswordUseCase.swift in Sources */,
 				FEECD03C212E40F900421577 /* UITextField.swift in Sources */,
@@ -1028,6 +1083,7 @@
 				521A57AE2134E40F00369986 /* OtherNavigator.swift in Sources */,
 				FE752F4C212D3C0B0082B096 /* APIService.swift in Sources */,
 				FE752FA3212DBAA40082B096 /* ForgotPasswordViewModel.swift in Sources */,
+				C90BD3742139361A00A95E95 /* PlaceData.swift in Sources */,
 				521A57E1213645EC00369986 /* DetailProductionViewModel.swift in Sources */,
 				C918E07B2134DF9C00F68F05 /* HomePageNavigator.swift in Sources */,
 				FEE5823A21382D83004EA52A /* BarCodeViewController.swift in Sources */,
@@ -1052,6 +1108,7 @@
 				FE752F81212D460F0082B096 /* LoginViewController.swift in Sources */,
 				521A57DA213534A300369986 /* UIColor+Ext.swift in Sources */,
 				FEECD037212E40F900421577 /* UIButton.swift in Sources */,
+				C90BD37021391D9C00A95E95 /* MapUseCase.swift in Sources */,
 				FE752F30212D3B8D0082B096 /* RxAlamofire+Multipart.swift in Sources */,
 				FEECD016212E404200421577 /* Constants.swift in Sources */,
 				FE752F10212D3AFF0082B096 /* BindableType.swift in Sources */,
@@ -1094,6 +1151,15 @@
 				521A57F221379AE400369986 /* vi */,
 			);
 			name = Production.storyboard;
+			sourceTree = "<group>";
+		};
+		C90BD36921391D4800A95E95 /* Map.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C90BD36821391D4800A95E95 /* en */,
+				C90BD36A21391D4A00A95E95 /* vi */,
+			);
+			name = Map.storyboard;
 			sourceTree = "<group>";
 		};
 		FE752F68212D41AB0082B096 /* LaunchScreen.storyboard */ = {

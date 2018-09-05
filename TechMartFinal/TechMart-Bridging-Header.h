@@ -24,3 +24,7 @@
 @import ObjectMapper;
 @import MBProgressHUD;
 @import AVFoundation;
+@import GooglePlaces;
+@import GoogleMaps;
+@import CoreLocation;
+@import Alamofire;

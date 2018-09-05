@@ -11,6 +11,7 @@ import Foundation
 protocol OtherNavigatorType {
     func toOther()
     func toBarCode()
+    func toMap()
 }
 
 struct OtherNavigator: OtherNavigatorType {
@@ -27,5 +28,10 @@ struct OtherNavigator: OtherNavigatorType {
     func toBarCode() {
         let navigation = BarCodeNavigator(navigationController: navigationController)
         navigation.toBarCode()
+    }
+    
+    func toMap() {
+        let navigation = MapNavigator(navigationController: navigationController)
+        navigation.toMap()
     }
 }

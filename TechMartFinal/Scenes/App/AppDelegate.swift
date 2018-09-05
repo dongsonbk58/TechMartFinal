@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         changeColorStatusBar()
         setCurrentLanguage()
         UIApplication.shared.statusBarStyle = .lightContent
+        GMSPlacesClient.provideAPIKey("AIzaSyCdAiRZWrBFm2Ig8LnxvcznBuZOHYxxdNo")
+        GMSServices.provideAPIKey("AIzaSyCdAiRZWrBFm2Ig8LnxvcznBuZOHYxxdNo")
         return true
     }
 

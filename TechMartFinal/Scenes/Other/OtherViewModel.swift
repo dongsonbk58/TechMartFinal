@@ -65,7 +65,9 @@ struct OtherViewModel: ViewModelType {
                 switch menu.type {
                 case .barCode:
                     self.navigator.toBarCode()
-                case .map, .settings, .updateProfile:
+                case .map:
+                    self.navigator.toMap()
+                case .settings, .updateProfile:
                     break
                 }
                 print(menu.type.title)

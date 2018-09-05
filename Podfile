@@ -23,6 +23,10 @@ target 'TechMartFinal' do
   pod 'IQKeyboardManagerSwift’
   pod 'TextFieldEffects'
   pod 'FSPagerView', '~> 0.7.0'
+  pod 'GooglePlaces'
+  pod 'GooglePlacePicker'
+  pod 'GoogleMaps'
+  pod 'PayPal-iOS-SDK'
 
   # Rx
   pod 'RxSwift', '~> 4.1'

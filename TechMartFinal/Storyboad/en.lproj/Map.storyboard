@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="DXX-RE-h79">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="eSQ-nW-fly" customClass="MapViewController" customModule="TechMartFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ceI-Yh-d3I">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYZ-Vy-T8o">
+                                <rect key="frame" x="25" y="28" width="278" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="fOR-OM-oOf"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TJP-c5-Zcr">
+                                <rect key="frame" x="25" y="68" width="278" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HaS-Wh-UV9">
+                                <rect key="frame" x="313" y="40" width="47" height="47"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="HaS-Wh-UV9" secondAttribute="height" id="Wf2-6t-HNP"/>
+                                </constraints>
+                                <state key="normal" image="board"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="HaS-Wh-UV9" firstAttribute="leading" secondItem="eYZ-Vy-T8o" secondAttribute="trailing" constant="10" id="FLU-7O-Jrk"/>
+                            <constraint firstItem="TJP-c5-Zcr" firstAttribute="top" secondItem="eYZ-Vy-T8o" secondAttribute="bottom" constant="10" id="J6u-Kz-QMo"/>
+                            <constraint firstItem="eYZ-Vy-T8o" firstAttribute="top" secondItem="huj-fN-gPi" secondAttribute="top" constant="8" id="NmY-g8-tpd"/>
+                            <constraint firstItem="eYZ-Vy-T8o" firstAttribute="leading" secondItem="huj-fN-gPi" secondAttribute="leading" constant="25" id="Z2m-Zr-4vc"/>
+                            <constraint firstItem="HaS-Wh-UV9" firstAttribute="top" secondItem="huj-fN-gPi" secondAttribute="top" constant="20" id="grK-Y5-MQB"/>
+                            <constraint firstItem="huj-fN-gPi" firstAttribute="trailing" secondItem="HaS-Wh-UV9" secondAttribute="trailing" constant="15" id="jGB-6F-ejC"/>
+                            <constraint firstItem="TJP-c5-Zcr" firstAttribute="height" secondItem="eYZ-Vy-T8o" secondAttribute="height" id="jon-TU-vxD"/>
+                            <constraint firstItem="TJP-c5-Zcr" firstAttribute="trailing" secondItem="eYZ-Vy-T8o" secondAttribute="trailing" id="mVl-qZ-Xqz"/>
+                            <constraint firstItem="HaS-Wh-UV9" firstAttribute="width" secondItem="ceI-Yh-d3I" secondAttribute="width" multiplier="1/8" id="wqR-ZK-CQn"/>
+                            <constraint firstItem="TJP-c5-Zcr" firstAttribute="leading" secondItem="eYZ-Vy-T8o" secondAttribute="leading" id="yag-61-e7N"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="huj-fN-gPi"/>
+                    </view>
+                    <connections>
+                        <outlet property="directionButton" destination="HaS-Wh-UV9" id="Xl4-QD-sJd"/>
+                        <outlet property="place1TextField" destination="eYZ-Vy-T8o" id="JqC-KY-Jec"/>
+                        <outlet property="place2TextField" destination="TJP-c5-Zcr" id="fp3-pk-Go6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ygt-ba-vvG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="16.800000000000001" y="254.12293853073464"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="board" width="512" height="512"/>
+    </resources>
+</document>
