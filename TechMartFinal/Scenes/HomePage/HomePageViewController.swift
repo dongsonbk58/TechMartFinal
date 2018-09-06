@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import  RxDataSources
 
 class HomePageViewController: UIViewController, BindableType {
-
-    var viewModel: HomePageViewModel!
     
+    @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var pagerView: FSPagerView! {
         didSet {
             self.pagerView.register(FSPagerViewCell.self, forCellWithReuseIdentifier: "cell")
@@ -26,15 +26,23 @@ class HomePageViewController: UIViewController, BindableType {
         }
     }
     
+    var viewModel: HomePageViewModel!
+    var loadTrigger = PublishSubject<Void>()
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0,
                                                                width: self.view.frame.size.width,
                                                                height: 5))
     fileprivate let imageNames = ["slider3", "slider2"]
     fileprivate var numberOfItems = 2
+    typealias HomeSectionModel = SectionModel<String, HomePageViewModel.CellInfo>
+    fileprivate var dataSource: RxTableViewSectionedReloadDataSource<HomeSectionModel>!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        loadTrigger.onNext(())
     }
     
     func configView() {
@@ -48,19 +56,17 @@ class HomePageViewController: UIViewController, BindableType {
         self.pagerView.interitemSpacing = CGFloat(1) * 20
         let newScale = 0.5 + CGFloat(0.9) * 0.5
         self.pagerView.itemSize = self.pagerView.frame.size.applying(CGAffineTransform(scaleX: newScale, y: newScale))
+        
+        tableView.do {
+            $0.register(cellType: DetailCategoryTableViewCell.self)
+            $0.register(cellType: CategoryTableViewCell.self)
+            $0.delaysContentTouches = false
+            $0.delegate = self
+        }
     }
     
     func bindViewModel() {
-        let trigger = NotificationCenter.default.rx.notification(Notification.Name.changeTab)
-            .map {
-                $0.object as? TabBarItemType
-            }
-            .unwrap()
-            .distinctUntilChanged()
-            .filter { $0 == TabBarItemType.home }
-            .mapToVoid()
-            .asDriverOnErrorJustComplete()
-        let input = HomePageViewModel.Input(loadTrigger: trigger)
+        let input = HomePageViewModel.Input(loadTrigger: loadTrigger.asDriverOnErrorJustComplete())
         let output = viewModel.transform(input)
         output.data
             .drive()
@@ -70,6 +76,39 @@ class HomePageViewController: UIViewController, BindableType {
             .disposed(by: rx.disposeBag)
         output.error
             .drive(rx.error)
+            .disposed(by: rx.disposeBag)
+        
+        self.dataSource = RxTableViewSectionedReloadDataSource<HomeSectionModel>(
+            configureCell: { [weak self] (_, tableView, indexPath, cellInfo) -> UITableViewCell in
+                let cell: UITableViewCell
+                switch cellInfo.type {
+                case .collection:
+                    let cellData = tableView.dequeueReusableCell(
+                        for: indexPath,
+                        cellType: CategoryTableViewCell.self)
+                    let tmp = BehaviorRelay<[Category]>(value: [])
+                    tmp.accept(cellInfo.category)
+                    cellData.configView(data: tmp)
+                    cellData.selectedCell = {
+                        print("selected")
+                    }
+                    cell = cellData
+                case .tableView:
+                    let cellInfo = tableView.dequeueReusableCell(
+                        for: indexPath,
+                        cellType: DetailCategoryTableViewCell.self)
+                  //  cellInfo.configData()
+                    cell = cellInfo
+                }
+                return cell
+            }
+        )
+        
+        output.sections
+            .map {
+                $0.map{ HomeSectionModel(model: $0.identifier, items: $0.cells) }
+            }
+            .drive(tableView.rx.items(dataSource: dataSource))
             .disposed(by: rx.disposeBag)
     }
 }
@@ -103,4 +142,15 @@ extension HomePageViewController: FSPagerViewDataSource,FSPagerViewDelegate {
 
 extension HomePageViewController: StoryboardSceneBased {
     static var sceneStoryboard: UIStoryboard = Storyboards.home
+}
+
+extension HomePageViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 2
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }

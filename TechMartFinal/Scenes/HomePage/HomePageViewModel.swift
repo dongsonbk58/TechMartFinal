@@ -13,6 +13,21 @@ struct HomePageViewModel: ViewModelType {
     let useCase: HomePageUseCaseType
     let navigator: HomePageNavigatorType
     
+    enum CellInfoType: String {
+        case collection
+        case tableView
+    }
+    
+    struct CellInfo {
+        let type: CellInfoType
+        let category: [Category]
+    }
+    
+    struct SectionInfo {
+        let identifier: String
+        let cells: [CellInfo]
+    }
+    
     func transform(_ input: HomePageViewModel.Input) -> HomePageViewModel.Output {
         let activityIndicator = ActivityIndicator()
         let errorTracker = ErrorTracker()
@@ -23,9 +38,15 @@ struct HomePageViewModel: ViewModelType {
                 .trackActivity(activityIndicator)
                 .asDriverOnErrorJustComplete()
         }
+        let secsion = input.loadTrigger.flatMapLatest {
+            return self.useCase.loadCategory().asDriverOnErrorJustComplete()
+            }.map {
+                [SectionInfo(identifier: "", cells: [CellInfo(type: .collection, category: $0)])]
+            }
         return Output(data: data,
                       loading: activityIndicator.asDriver(),
-                      error: errorTracker.asDriver())
+                      error: errorTracker.asDriver(),
+                      sections: secsion)
     }
     
     struct Input {
@@ -36,5 +57,13 @@ struct HomePageViewModel: ViewModelType {
         let data: Driver<Void>
         let loading: Driver<Bool>
         let error: Driver<Error>
+        let sections: Driver<[SectionInfo]>
     }
+    
+//    private func configDataSource() -> [SectionInfo] {
+//        let section:[SectionInfo] = [SectionInfo(identifier: "", cells: [
+//            CellInfo(type: .collection)]), SectionInfo(identifier: "", cells: [
+//                CellInfo(type: .tableView)])]
+//        return section
+//    }
 }
