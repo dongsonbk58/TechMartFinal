@@ -17,7 +17,7 @@ struct MapNavigator: MapNavigatorType {
     
     func toMap() {
         let mapVc = MapViewController.instantiate()
-        let vm = MapViewModel(useCase: MapUseCase(), navigtion: self)
+        let vm = MapViewModel(useCase: MapUseCase(repository: DirectionRepository()), navigtion: self)
         mapVc.bindViewModel(to: vm)
         navigationController.pushViewController(mapVc, animated: true)
     }

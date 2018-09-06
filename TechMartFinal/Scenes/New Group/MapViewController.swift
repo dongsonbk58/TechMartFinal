@@ -21,6 +21,7 @@ class MapViewController: UIViewController, BindableType {
     var place1: PlaceData = PlaceData()
     var place2: PlaceData = PlaceData()
     var typePlace: Int = -1
+    var directionTrigger = PublishSubject<(PlaceData, PlaceData)>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,10 +59,17 @@ class MapViewController: UIViewController, BindableType {
         currentLocationManager.delegate = self
     }
     
+    @IBAction func tapDirection(_ sender: UIButton) {
+        if place1.title != "" && place2.title != "" {
+            directionTrigger.onNext((place1, place2))
+        }
+    }
+    
     func bindViewModel() {
         let input = MapViewModel.Input(loadTrigger: Driver.just(()),
                                        place1Trigger: place1TextField.rx.controlEvent([.editingDidBegin]).asDriver(),
-                                       place2Trigger: place2TextField.rx.controlEvent([.editingDidBegin]).asDriver())
+                                       place2Trigger: place2TextField.rx.controlEvent([.editingDidBegin]).asDriver(),
+                                       directionTrigger: directionTrigger.asDriverOnErrorJustComplete())
         
         let output = viewModel.transform(input)
         
@@ -76,6 +84,18 @@ class MapViewController: UIViewController, BindableType {
         output.place2Trigger
             .drive(placeBinder)
             .disposed(by: rx.disposeBag)
+        
+        output.direction
+            .drive(directionBinder)
+            .disposed(by: rx.disposeBag)
+        
+        output.error
+            .drive(rx.error)
+            .disposed(by: rx.disposeBag)
+        
+        output.indicator
+            .drive(rx.isLoading)
+            .disposed(by: rx.disposeBag)
     }
     
     private var placeBinder: Binder<Int> {
@@ -87,6 +107,12 @@ class MapViewController: UIViewController, BindableType {
             vc.present(autoCompleteViewControlelr, animated: true, completion: {
              //   MBProgressHUD.hide(for: vc.view, animated: true)
             })
+        })
+    }
+    
+    private var directionBinder: Binder<GMSPath> {
+        return Binder(self, binding: { vc, path  in
+            print("path \(path)")
         })
     }
 

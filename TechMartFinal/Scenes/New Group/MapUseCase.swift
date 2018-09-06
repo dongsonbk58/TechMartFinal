@@ -14,9 +14,11 @@ protocol MapUseCaseType {
 }
 
 struct MapUseCase: MapUseCaseType {
+    
+    let repository: DirectionRepositoryType
+    
     func getDirection(place1: PlaceData, place2: PlaceData) -> Observable<GMSPath> {
-        let urlRequest = "https://maps.googleapis.com/maps/api/directions/json?origin=\(place1.lat),\(place1.long)(&destination=\(place2.lat),\(place2.long)&sensor=true&key=AIzaSyDPpRYrSmZFNxXeGe6k8QDRHMv9AXK95o4"
-        
+        return repository.getDirection(place1: place1, place2: place2)
       
     }
 }

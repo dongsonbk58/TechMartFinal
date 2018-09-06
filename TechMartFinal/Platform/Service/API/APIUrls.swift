@@ -10,6 +10,6 @@ import UIKit
 
 extension API {
     struct Urls {
-        static let getRepoList = "https://api.github.com/search/repositories"
+        static let getDirection = "https://maps.googleapis.com/maps/api/directions/json?"
     }
 }

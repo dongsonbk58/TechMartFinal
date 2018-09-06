@@ -28,3 +28,4 @@
 @import GoogleMaps;
 @import CoreLocation;
 @import Alamofire;
+@import ObjectMapper;

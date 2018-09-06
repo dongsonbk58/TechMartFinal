@@ -36,6 +36,9 @@
 		521A57EE21377F5500369986 /* CountProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521A57EC21377F5500369986 /* CountProductTableViewCell.xib */; };
 		521A57EF21379AE200369986 /* Production.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 521A57F121379AE200369986 /* Production.storyboard */; };
 		521A57F42137C1CF00369986 /* Layer+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57F32137C1CF00369986 /* Layer+.swift */; };
+		C90A8D07214118F600C24613 /* Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A8D06214118F600C24613 /* Direction.swift */; };
+		C90A8D0B2141195800C24613 /* DirectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A8D0A2141195800C24613 /* DirectionRepository.swift */; };
+		C90A8D0D214119E700C24613 /* API+Direction.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A8D0C214119E700C24613 /* API+Direction.swift */; };
 		C90BD3622137C42900A95E95 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */; };
 		C90BD3632137C42900A95E95 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */; };
 		C90BD36721391D4800A95E95 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90BD36921391D4800A95E95 /* Map.storyboard */; };
@@ -188,6 +191,9 @@
 		521A57F32137C1CF00369986 /* Layer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layer+.swift"; sourceTree = "<group>"; };
 		6BDC93ED4C7AC696F0C86BA6 /* Pods-TechMartFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.release.xcconfig"; sourceTree = "<group>"; };
 		7F4575CF6E8C0103D0810FCB /* Pods-TechMartFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.debug.xcconfig"; sourceTree = "<group>"; };
+		C90A8D06214118F600C24613 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
+		C90A8D0A2141195800C24613 /* DirectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionRepository.swift; sourceTree = "<group>"; };
+		C90A8D0C214119E700C24613 /* API+Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API+Direction.swift"; sourceTree = "<group>"; };
 		C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTableViewCell.swift; sourceTree = "<group>"; };
 		C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FavoriteTableViewCell.xib; sourceTree = "<group>"; };
 		C90BD36821391D4800A95E95 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Map.storyboard; sourceTree = "<group>"; };
@@ -413,6 +419,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C90A8D082141193A00C24613 /* Platform */ = {
+			isa = PBXGroup;
+			children = (
+				C90A8D092141194700C24613 /* Repository */,
+				FE752F3E212D3BD70082B096 /* Service */,
+			);
+			path = Platform;
+			sourceTree = "<group>";
+		};
+		C90A8D092141194700C24613 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C90A8D0A2141195800C24613 /* DirectionRepository.swift */,
+			);
+			path = "\U0010Repository";
+			sourceTree = "<group>";
+		};
 		C90BD35B2137C3D100A95E95 /* FavoriteTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,10 +522,10 @@
 		FE752EF2212D389C0082B096 /* TechMartFinal */ = {
 			isa = PBXGroup;
 			children = (
+				C90A8D082141193A00C24613 /* Platform */,
 				521A57D52135340700369986 /* Support */,
 				FEECD014212E403400421577 /* Ultis */,
 				FE752F08212D3A890082B096 /* Architure */,
-				FE752F3E212D3BD70082B096 /* Service */,
 				FE752F4F212D3C790082B096 /* Entity */,
 				FE752F50212D3C870082B096 /* Extension */,
 				FE752F55212D3CB70082B096 /* Storyboad */,
@@ -635,6 +658,7 @@
 				FE752F43212D3C0A0082B096 /* APIOutput.swift */,
 				FE752F46212D3C0B0082B096 /* APIService.swift */,
 				FE752F44212D3C0A0082B096 /* APIUrls.swift */,
+				C90A8D0C214119E700C24613 /* API+Direction.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -647,6 +671,7 @@
 				521A57BA2134F4FB00369986 /* BaseModel.swift */,
 				FE1BD4C12136DF760050D86E /* Cart.swift */,
 				C90BD3732139361A00A95E95 /* PlaceData.swift */,
+				C90A8D06214118F600C24613 /* Direction.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -1039,6 +1064,7 @@
 				C918E0792134D9DD00F68F05 /* HomePageViewModel.swift in Sources */,
 				FE1BD4C52136EB600050D86E /* FavoriteViewController.swift in Sources */,
 				FE752FA1212DBA880082B096 /* ForgotPasswordViewController.swift in Sources */,
+				C90A8D07214118F600C24613 /* Direction.swift in Sources */,
 				521A57BD2135049500369986 /* TabBarItemType.swift in Sources */,
 				FE752F16212D3B120082B096 /* UIViewController+Debug.swift in Sources */,
 				FEECD041212E40F900421577 /* UIViewControllerExtendsion.swift in Sources */,
@@ -1054,6 +1080,7 @@
 				FE752EFC212D389C0082B096 /* TechMartFinal.xcdatamodeld in Sources */,
 				521A57D42135338100369986 /* Fonts.swift in Sources */,
 				FEECD035212E40F900421577 /* UITableView.swift in Sources */,
+				C90A8D0D214119E700C24613 /* API+Direction.swift in Sources */,
 				C90BD3622137C42900A95E95 /* FavoriteTableViewCell.swift in Sources */,
 				521A57BF21351DBB00369986 /* MainTabBarController.swift in Sources */,
 				FEECD033212E40F900421577 /* Color.swift in Sources */,
@@ -1102,6 +1129,7 @@
 				521A57AA2134E3DB00369986 /* OtherViewModel.swift in Sources */,
 				FE752F2B212D3B780082B096 /* APIServiceBase.swift in Sources */,
 				FE752F94212D676B0082B096 /* SignUpNavigator.swift in Sources */,
+				C90A8D0B2141195800C24613 /* DirectionRepository.swift in Sources */,
 				FE752F11212D3AFF0082B096 /* ActivityIndicator.swift in Sources */,
 				521A57CD213532DB00369986 /* MenuCell.swift in Sources */,
 				FE752F32212D3B8D0082B096 /* CacheManager.swift in Sources */,

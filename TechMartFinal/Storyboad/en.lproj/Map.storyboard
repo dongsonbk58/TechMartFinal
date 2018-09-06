@@ -41,6 +41,9 @@
                                     <constraint firstAttribute="width" secondItem="HaS-Wh-UV9" secondAttribute="height" id="Wf2-6t-HNP"/>
                                 </constraints>
                                 <state key="normal" image="board"/>
+                                <connections>
+                                    <action selector="tapDirection:" destination="eSQ-nW-fly" eventType="touchUpInside" id="2de-Om-6Vf"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
