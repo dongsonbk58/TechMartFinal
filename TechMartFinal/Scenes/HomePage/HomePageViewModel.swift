@@ -12,6 +12,7 @@ struct HomePageViewModel: ViewModelType {
     
     let useCase: HomePageUseCaseType
     let navigator: HomePageNavigatorType
+    let homePage: HomePageModel?
     
     enum CellInfoType: String {
         case slider
@@ -19,10 +20,13 @@ struct HomePageViewModel: ViewModelType {
         case tableView
     }
     
+    class HomePageModel: Then {
+        var category: [Category] = []
+        var categoryDetail: [CategoryDetail] = []
+    }
+    
     struct CellInfo {
         let type: CellInfoType
-        let category: [Category]?
-        let categoryDetail: [CategoryDetail]?
     }
     
     struct SectionInfo {
@@ -31,6 +35,8 @@ struct HomePageViewModel: ViewModelType {
     }
     
     func transform(_ input: HomePageViewModel.Input) -> HomePageViewModel.Output {
+        let defaultData = homePage ?? HomePageModel()
+        let homePageSubject = BehaviorRelay<HomePageModel>(value: defaultData)
         let activityIndicator = ActivityIndicator()
         let errorTracker = ErrorTracker()
         let data = input.loadTrigger
@@ -40,13 +46,20 @@ struct HomePageViewModel: ViewModelType {
                 .trackActivity(activityIndicator)
                 .asDriverOnErrorJustComplete()
         }
-//        let secsion = input.loadTrigger.map {
-//            self.configDataSource()
-//        }
-        let secsion = input.loadTrigger.flatMapLatest {
-            self.useCase.loadDataCategory().asDriverOnErrorJustComplete()
+        
+        let secsion = input.loadTrigger
+            .withLatestFrom(homePageSubject.asDriverOnErrorJustComplete())
+            .map { subject -> [SectionInfo] in
+                let tmp = HomePageModel()
+                tmp.category = self.useCase.loadCategory()
+                tmp.categoryDetail = self.useCase.loadCategoryDetail()
+                homePageSubject.accept(tmp)
+                return self.configDataSource(homePageSubject: subject)
         }
+        
+        
         return Output(data: data,
+                      homePageData: homePageSubject.asDriverOnErrorJustComplete(),
                       loading: activityIndicator.asDriver(),
                       error: errorTracker.asDriver(),
                       sections: secsion)
@@ -58,15 +71,17 @@ struct HomePageViewModel: ViewModelType {
     
     struct Output {
         let data: Driver<Void>
+        let homePageData: Driver<HomePageModel>
         let loading: Driver<Bool>
         let error: Driver<Error>
         let sections: Driver<[SectionInfo]>
     }
     
-//    private func configDataSource() -> [SectionInfo] {
-//        let section:[SectionInfo] = [SectionInfo(identifier: "", cells: [
-//            CellInfo(type: .collection)]), SectionInfo(identifier: "", cells: [
-//                CellInfo(type: .tableView)])]
-//        return section
-//    }
+    private func configDataSource(homePageSubject: HomePageModel) -> [SectionInfo] {
+        let sectionOne = SectionInfo(identifier: "", cells: [CellInfo(type: .slider)])
+        let sectionTwo = SectionInfo(identifier: "", cells: [CellInfo(type: .collection)])
+        let sectionThree = SectionInfo(identifier: "", cells: [CellInfo(type: .tableView)])
+        return [sectionOne, sectionTwo, sectionThree]
+    }
 }
+

@@ -14,6 +14,7 @@ class HomePageViewController: UIViewController, BindableType {
     @IBOutlet private weak var tableView: UITableView!
     var viewModel: HomePageViewModel!
     var loadTrigger = PublishSubject<Void>()
+    var homePageSubject: HomePageViewModel.HomePageModel?
   
     lazy var searchBar:UISearchBar = UISearchBar(frame: CGRect(x: 0, y: 0,
                                                                width: self.view.frame.size.width,
@@ -47,6 +48,12 @@ class HomePageViewController: UIViewController, BindableType {
         }
     }
     
+    fileprivate var homePageBinder: Binder<HomePageViewModel.HomePageModel> {
+        return Binder(self) { vc, data in
+            vc.homePageSubject = data
+        }
+    }
+    
     func bindViewModel() {
         let input = HomePageViewModel.Input(loadTrigger: loadTrigger.asDriverOnErrorJustComplete())
         let output = viewModel.transform(input)
@@ -59,6 +66,9 @@ class HomePageViewController: UIViewController, BindableType {
         output.error
             .drive(rx.error)
             .disposed(by: rx.disposeBag)
+        output.homePageData
+            .drive(homePageBinder)
+            .disposed(by: rx.disposeBag)
         
         self.dataSource = RxTableViewSectionedReloadDataSource<HomeSectionModel>(
             configureCell: { [weak self] (_, tableView, indexPath, cellInfo) -> UITableViewCell in
@@ -69,8 +79,8 @@ class HomePageViewController: UIViewController, BindableType {
                         for: indexPath,
                         cellType: CategoryTableViewCell.self)
                     let tmp = BehaviorRelay<[Category]>(value: [])
-                    if cellInfo.category != nil {
-                        tmp.accept(cellInfo.category!)
+                    if let data = self?.homePageSubject?.category {
+                        tmp.accept(data)
                     }
                     cellData.configView(data: tmp)
                     cellData.selectedCell = {
@@ -82,8 +92,8 @@ class HomePageViewController: UIViewController, BindableType {
                         for: indexPath,
                         cellType: DetailCategoryTableViewCell.self)
                     let tmp = BehaviorRelay<[CategoryDetail]>(value: [])
-                    if cellInfo.categoryDetail != nil {
-                        tmp.accept(cellInfo.categoryDetail!)
+                    if let data = self?.homePageSubject?.categoryDetail {
+                        tmp.accept(data)
                     }
                     cellData.configView(data: tmp)
                     cell = cellData

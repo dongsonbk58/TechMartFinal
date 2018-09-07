@@ -17,7 +17,7 @@ struct HomepageNavigator: HomePageNavigatorType {
     
     func toHomePage() {
         let homePageVC = HomePageViewController.instantiate()
-        let vm = HomePageViewModel(useCase: HomePageUseCase(), navigator: self)
+        let vm = HomePageViewModel(useCase: HomePageUseCase(), navigator: self, homePage: HomePageViewModel.HomePageModel())
         homePageVC.bindViewModel(to: vm)
         navigationController.pushViewController(homePageVC, animated: true)
     }

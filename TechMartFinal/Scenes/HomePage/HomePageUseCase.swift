@@ -12,7 +12,7 @@ protocol HomePageUseCaseType {
     func loadData() -> Observable<Void>
     func loadCategory() -> [Category]
     func loadCategoryDetail() -> [CategoryDetail]
-    func loadDataCategory() -> Observable<[HomePageViewModel.SectionInfo]>
+  //  func loadDataCategory() -> Observable<[HomePageViewModel.SectionInfo]>
 }
 
 struct HomePageUseCase: HomePageUseCaseType {
@@ -55,14 +55,14 @@ struct HomePageUseCase: HomePageUseCaseType {
         return data
     }
     
-    func loadDataCategory() -> Observable<[HomePageViewModel.SectionInfo]> {
-        var data = [HomePageViewModel.SectionInfo]()
-        let dataCategory = HomePageViewModel.SectionInfo(identifier: "Danh muc san pham", cells: [HomePageViewModel.CellInfo(type: .collection, category: loadCategory(), categoryDetail: nil)])
-        let dataCategoryDetail = HomePageViewModel.SectionInfo(identifier: "", cells: [HomePageViewModel.CellInfo(type: .tableView, category: nil, categoryDetail: loadCategoryDetail())])
-        let slider = HomePageViewModel.SectionInfo(identifier: "", cells: [HomePageViewModel.CellInfo(type: .slider, category: nil, categoryDetail: nil)])
-        data.append(slider)
-        data.append(dataCategory)
-        data.append(dataCategoryDetail)
-        return Observable.just(data)
-    }
+//    func loadDataCategory() -> Observable<[HomePageViewModel.SectionInfo]> {
+//        var data = [HomePageViewModel.SectionInfo]()
+//        let dataCategory = HomePageViewModel.SectionInfo(identifier: "Danh muc san pham", cells: [HomePageViewModel.CellInfo(type: .collection, category: loadCategory(), categoryDetail: nil)])
+//        let dataCategoryDetail = HomePageViewModel.SectionInfo(identifier: "", cells: [HomePageViewModel.CellInfo(type: .tableView, category: nil, categoryDetail: loadCategoryDetail())])
+//        let slider = HomePageViewModel.SectionInfo(identifier: "", cells: [HomePageViewModel.CellInfo(type: .slider, category: nil, categoryDetail: nil)])
+//        data.append(slider)
+//        data.append(dataCategory)
+//        data.append(dataCategoryDetail)
+//        return Observable.just(data)
+//    }
 }
