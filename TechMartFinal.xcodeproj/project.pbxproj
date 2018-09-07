@@ -45,6 +45,8 @@
 		C90A8D152142524600C24613 /* SliderTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90A8D132142524600C24613 /* SliderTableViewCell.xib */; };
 		C90A8D1821425FA400C24613 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90A8D1621425FA400C24613 /* ProductCollectionViewCell.swift */; };
 		C90A8D1921425FA400C24613 /* ProductCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90A8D1721425FA400C24613 /* ProductCollectionViewCell.xib */; };
+		521A57F721392DAD00369986 /* InformationDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521A57F521392DAD00369986 /* InformationDetailTableViewCell.swift */; };
+		521A57F821392DAD00369986 /* InformationDetailTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 521A57F621392DAD00369986 /* InformationDetailTableViewCell.xib */; };
 		C90BD3622137C42900A95E95 /* FavoriteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90BD3602137C42900A95E95 /* FavoriteTableViewCell.swift */; };
 		C90BD3632137C42900A95E95 /* FavoriteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C90BD3612137C42900A95E95 /* FavoriteTableViewCell.xib */; };
 		C90BD36721391D4800A95E95 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C90BD36921391D4800A95E95 /* Map.storyboard */; };
@@ -202,6 +204,8 @@
 		521A57F021379AE200369986 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/Production.storyboard; sourceTree = "<group>"; };
 		521A57F221379AE400369986 /* vi */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = vi; path = vi.lproj/Production.storyboard; sourceTree = "<group>"; };
 		521A57F32137C1CF00369986 /* Layer+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Layer+.swift"; sourceTree = "<group>"; };
+		521A57F521392DAD00369986 /* InformationDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDetailTableViewCell.swift; sourceTree = "<group>"; };
+		521A57F621392DAD00369986 /* InformationDetailTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationDetailTableViewCell.xib; sourceTree = "<group>"; };
 		6BDC93ED4C7AC696F0C86BA6 /* Pods-TechMartFinal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.release.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.release.xcconfig"; sourceTree = "<group>"; };
 		7F4575CF6E8C0103D0810FCB /* Pods-TechMartFinal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechMartFinal.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TechMartFinal/Pods-TechMartFinal.debug.xcconfig"; sourceTree = "<group>"; };
 		C90A8D06214118F600C24613 /* Direction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Direction.swift; sourceTree = "<group>"; };
@@ -432,6 +436,8 @@
 				521A57E821367A9700369986 /* ImageDetailTableViewCell.xib */,
 				521A57EB21377F5500369986 /* CountProductTableViewCell.swift */,
 				521A57EC21377F5500369986 /* CountProductTableViewCell.xib */,
+				521A57F521392DAD00369986 /* InformationDetailTableViewCell.swift */,
+				521A57F621392DAD00369986 /* InformationDetailTableViewCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -954,6 +960,7 @@
 			files = (
 				FEECD047212E539B00421577 /* ProfileViewController.xib in Resources */,
 				521A57EA21367A9700369986 /* ImageDetailTableViewCell.xib in Resources */,
+				521A57F821392DAD00369986 /* InformationDetailTableViewCell.xib in Resources */,
 				C90BD3632137C42900A95E95 /* FavoriteTableViewCell.xib in Resources */,
 				FE752F8C212D67430082B096 /* SignUpViewController.xib in Resources */,
 				C90A8D152142524600C24613 /* SliderTableViewCell.xib in Resources */,
@@ -1195,6 +1202,7 @@
 				FEECD037212E40F900421577 /* UIButton.swift in Sources */,
 				C90BD37021391D9C00A95E95 /* MapUseCase.swift in Sources */,
 				FE752F30212D3B8D0082B096 /* RxAlamofire+Multipart.swift in Sources */,
+				521A57F721392DAD00369986 /* InformationDetailTableViewCell.swift in Sources */,
 				FEECD016212E404200421577 /* Constants.swift in Sources */,
 				FE44BB3E214168390020FFD0 /* CategoryTableViewCell.swift in Sources */,
 				FE752F10212D3AFF0082B096 /* BindableType.swift in Sources */,

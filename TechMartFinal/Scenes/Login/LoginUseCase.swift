@@ -14,7 +14,12 @@ protocol LoginUseCaseType {
 
 struct LoginUseCase: LoginUseCaseType {
     func login( username: String, password: String) -> Observable<Void> {
-        return Observable.just(())
+        return Observable.create { observer in
+            DispatchQueue.global().asyncAfter(deadline: .now() + 1) {
+                observer.onNext(())
+            }
+            return Disposables.create()
+        }
     }
 }
 

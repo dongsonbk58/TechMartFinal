@@ -44,7 +44,7 @@ class DetailProductionViewController: UIViewController, BindableType {
             .disposed(by: rx.disposeBag)
         
         self.dataSource = RxTableViewSectionedReloadDataSource<DetailSectionModel>(
-            configureCell: { [weak self] (_, tableView, indexPath, cellInfo) -> UITableViewCell in
+            configureCell: { (_, tableView, indexPath, cellInfo) -> UITableViewCell in
                 let cell: UITableViewCell
                 switch cellInfo.type {
                 case .imageDetail:
@@ -57,6 +57,15 @@ class DetailProductionViewController: UIViewController, BindableType {
                         for: indexPath,
                         cellType: CountProductTableViewCell.self)
                     cellInfo.configData()
+                    cell = cellInfo
+                case .detailProduct:
+                    let cellInfo = tableView.dequeueReusableCell(
+                        for: indexPath,
+                        cellType: InformationDetailTableViewCell.self)
+                    cellInfo.configData()
+                    cellInfo.seeMore = {
+                        cellInfo.setSeeMore(state: $0)
+                    }
                     cell = cellInfo
                 }
                 return cell
@@ -78,6 +87,9 @@ class DetailProductionViewController: UIViewController, BindableType {
             $0.delaysContentTouches = false
             $0.register(cellType: ImageDetailTableViewCell.self)
             $0.register(cellType: CountProductTableViewCell.self)
+            $0.register(cellType: InformationDetailTableViewCell.self)
+            $0.estimatedRowHeight = 344
+            $0.rowHeight = UITableViewAutomaticDimension
             $0.delegate = self
         }
         
@@ -109,4 +121,5 @@ extension DetailProductionViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
+    
 }

@@ -14,6 +14,7 @@ struct DetailProductionViewModel:ViewModelType {
     enum CellInfoType: String {
         case imageDetail
         case countProduct
+        case detailProduct
     }
     
     struct CellInfo {
@@ -50,9 +51,10 @@ struct DetailProductionViewModel:ViewModelType {
     }
     
     private func configDataSource() -> [SectionInfo] {
-        let section:[SectionInfo] = [SectionInfo(identifier: "", cells: [
-            CellInfo(type: .imageDetail)]), SectionInfo(identifier: "", cells: [
-                CellInfo(type: .countProduct)])]
+        let section:[SectionInfo] = [
+            SectionInfo(identifier: "", cells: [CellInfo(type: .imageDetail)]),
+            SectionInfo(identifier: "", cells: [CellInfo(type: .detailProduct)]),
+            SectionInfo(identifier: "", cells: [CellInfo(type: .countProduct)])]
         return section
     }
 }
