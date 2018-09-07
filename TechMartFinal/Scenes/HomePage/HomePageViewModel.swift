@@ -14,13 +14,15 @@ struct HomePageViewModel: ViewModelType {
     let navigator: HomePageNavigatorType
     
     enum CellInfoType: String {
+        case slider
         case collection
         case tableView
     }
     
     struct CellInfo {
         let type: CellInfoType
-        let category: [Category]
+        let category: [Category]?
+        let categoryDetail: [CategoryDetail]?
     }
     
     struct SectionInfo {
@@ -38,11 +40,12 @@ struct HomePageViewModel: ViewModelType {
                 .trackActivity(activityIndicator)
                 .asDriverOnErrorJustComplete()
         }
+//        let secsion = input.loadTrigger.map {
+//            self.configDataSource()
+//        }
         let secsion = input.loadTrigger.flatMapLatest {
-            return self.useCase.loadCategory().asDriverOnErrorJustComplete()
-            }.map {
-                [SectionInfo(identifier: "", cells: [CellInfo(type: .collection, category: $0)])]
-            }
+            self.useCase.loadDataCategory().asDriverOnErrorJustComplete()
+        }
         return Output(data: data,
                       loading: activityIndicator.asDriver(),
                       error: errorTracker.asDriver(),

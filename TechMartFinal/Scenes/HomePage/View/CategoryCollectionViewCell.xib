@@ -24,20 +24,20 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G6m-4W-90z">
                         <rect key="frame" x="0.0" y="0.0" width="93" height="111"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lle-4L-1C3">
-                                <rect key="frame" x="15.5" y="6" width="62" height="62.5"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user" translatesAutoresizingMaskIntoConstraints="NO" id="lle-4L-1C3">
+                                <rect key="frame" x="16" y="6.5" width="62" height="62"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="lle-4L-1C3" secondAttribute="height" id="usL-cL-uhg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1yE-NO-9OY">
                                 <rect key="frame" x="-0.5" y="60.5" width="93" height="45.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="1yE-NO-9OY" firstAttribute="width" secondItem="G6m-4W-90z" secondAttribute="width" id="USq-Nv-Mmr"/>
                             <constraint firstItem="1yE-NO-9OY" firstAttribute="centerY" secondItem="G6m-4W-90z" secondAttribute="centerY" multiplier="3/2" id="b2W-J4-7xh"/>
@@ -65,4 +65,7 @@
             <point key="canvasLocation" x="55.5" y="84.5"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="user" width="43" height="44"/>
+    </resources>
 </document>

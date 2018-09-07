@@ -15,3 +15,15 @@ class Category {
         self.image = image
     }
 }
+
+class CategoryDetail {
+    var category: Category
+    var product: [Product]
+    var background: String
+    
+    init(category: Category, product: [Product], background: String) {
+        self.category = category
+        self.product = product
+        self.background = background
+    }
+}

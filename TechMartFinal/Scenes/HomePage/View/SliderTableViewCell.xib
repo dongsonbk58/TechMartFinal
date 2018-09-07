@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="SliderTableViewCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="SliderTableViewCell" rowHeight="146" id="KGk-i7-Jjw" customClass="SliderTableViewCell" customModule="TechMartFinal" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="315" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="315" height="145.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yTE-n0-QVc" customClass="FSPagerView" customModule="FSPagerView">
+                        <rect key="frame" x="0.0" y="0.0" width="315" height="145.5"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJA-ER-k9X" customClass="FSPageControl" customModule="FSPagerView">
+                        <rect key="frame" x="0.0" y="124.5" width="315" height="21"/>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="yTE-n0-QVc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="1Ef-y1-qal"/>
+                    <constraint firstItem="nJA-ER-k9X" firstAttribute="leading" secondItem="yTE-n0-QVc" secondAttribute="leading" id="6pD-Jp-FEb"/>
+                    <constraint firstAttribute="bottom" secondItem="yTE-n0-QVc" secondAttribute="bottom" id="7d2-S7-WL3"/>
+                    <constraint firstItem="nJA-ER-k9X" firstAttribute="height" secondItem="yTE-n0-QVc" secondAttribute="height" multiplier="1/7" id="M3e-cX-pGB"/>
+                    <constraint firstItem="nJA-ER-k9X" firstAttribute="trailing" secondItem="yTE-n0-QVc" secondAttribute="trailing" id="ULY-91-x19"/>
+                    <constraint firstAttribute="trailing" secondItem="yTE-n0-QVc" secondAttribute="trailing" id="cvZ-GP-m7f"/>
+                    <constraint firstItem="yTE-n0-QVc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="db0-ga-Smc"/>
+                    <constraint firstItem="nJA-ER-k9X" firstAttribute="bottom" secondItem="yTE-n0-QVc" secondAttribute="bottom" id="oeM-PN-W0p"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="pageControl" destination="nJA-ER-k9X" id="0Vq-dG-KQt"/>
+                <outlet property="pagerView" destination="yTE-n0-QVc" id="CxT-bU-mFV"/>
+            </connections>
+            <point key="canvasLocation" x="28.5" y="81"/>
+        </tableViewCell>
+    </objects>
+</document>

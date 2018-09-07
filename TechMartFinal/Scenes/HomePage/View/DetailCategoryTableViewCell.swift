@@ -10,8 +10,19 @@ import UIKit
 
 class DetailCategoryTableViewCell: UITableViewCell, NibReusable {
 
+   
+    @IBOutlet private weak var categoryDetailTableView: UITableView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        categoryDetailTableView.register(cellType: CategoryDetailTableViewCell.self)
+    }
+    
+    func configView(data: BehaviorRelay<[CategoryDetail]>) {
+        categoryDetailTableView.dataSource = nil
+        _ = data.asObservable().bind(to: categoryDetailTableView.rx.items) { tableView, index, data in
+            return tableView.dequeueReusableCell(for: IndexPath(row: index, section: 0),
+                                                      cellType: CategoryDetailTableViewCell.self)
+        }
     }
 }

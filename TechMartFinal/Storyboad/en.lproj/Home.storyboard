@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -162,7 +161,7 @@
             </objects>
             <point key="canvasLocation" x="-244" y="2070"/>
         </scene>
-        <!--Data Source-->
+        <!--Home Page View Controller-->
         <scene sceneID="ptv-iz-Ltt">
             <objects>
                 <viewController storyboardIdentifier="HomePageViewController" id="Chi-h2-BnW" customClass="HomePageViewController" customModule="TechMartFinal" customModuleProvider="target" sceneMemberID="viewController">
@@ -170,47 +169,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Hq-UY-Vis" customClass="FSPagerView" customModule="FSPagerView">
-                                <rect key="frame" x="0.0" y="25" width="375" height="190.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="Chi-h2-BnW" id="A8L-KJ-kAi"/>
-                                    <outlet property="delegate" destination="Chi-h2-BnW" id="Cjh-rf-Vaa"/>
-                                </connections>
-                            </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0s3-iy-jXU" customClass="FSPageControl" customModule="FSPagerView">
-                                <rect key="frame" x="0.0" y="188.5" width="375" height="27"/>
-                                <viewLayoutGuide key="safeArea" id="TJF-Oi-JbV"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="hidesForSinglePage" value="NO"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvb-F5-ALy">
-                                <rect key="frame" x="0.0" y="215.5" width="375" height="451.5"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cvb-F5-ALy">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3AY-Ea-R4a" firstAttribute="trailing" secondItem="cvb-F5-ALy" secondAttribute="trailing" id="HRD-p5-pis"/>
-                            <constraint firstItem="cvb-F5-ALy" firstAttribute="top" secondItem="6Hq-UY-Vis" secondAttribute="bottom" id="Hwq-xy-rcg"/>
-                            <constraint firstItem="6Hq-UY-Vis" firstAttribute="leading" secondItem="3AY-Ea-R4a" secondAttribute="leading" id="PIj-Ib-cak"/>
-                            <constraint firstItem="6Hq-UY-Vis" firstAttribute="trailing" secondItem="3AY-Ea-R4a" secondAttribute="trailing" id="X5V-Uc-65L"/>
-                            <constraint firstItem="0s3-iy-jXU" firstAttribute="leading" secondItem="3AY-Ea-R4a" secondAttribute="leading" id="ehe-7g-xSK"/>
-                            <constraint firstItem="3AY-Ea-R4a" firstAttribute="trailing" secondItem="0s3-iy-jXU" secondAttribute="trailing" id="hFe-Re-Lzi"/>
+                            <constraint firstItem="cvb-F5-ALy" firstAttribute="top" secondItem="3AY-Ea-R4a" secondAttribute="top" id="ezO-28-rBN"/>
                             <constraint firstItem="3AY-Ea-R4a" firstAttribute="bottom" secondItem="cvb-F5-ALy" secondAttribute="bottom" id="m4T-xF-SkB"/>
-                            <constraint firstItem="6Hq-UY-Vis" firstAttribute="top" secondItem="3AY-Ea-R4a" secondAttribute="top" constant="5" id="oUB-rz-Vtq"/>
-                            <constraint firstItem="0s3-iy-jXU" firstAttribute="bottom" secondItem="6Hq-UY-Vis" secondAttribute="bottom" id="qNs-jM-RC8"/>
                             <constraint firstItem="cvb-F5-ALy" firstAttribute="leading" secondItem="3AY-Ea-R4a" secondAttribute="leading" id="s1e-B3-enB"/>
-                            <constraint firstItem="0s3-iy-jXU" firstAttribute="height" secondItem="6Hq-UY-Vis" secondAttribute="height" multiplier="1/7" id="sRp-wG-U2d"/>
-                            <constraint firstItem="6Hq-UY-Vis" firstAttribute="height" secondItem="xtR-TP-3rJ" secondAttribute="height" multiplier="1/3.5" id="xHq-2q-qJS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="3AY-Ea-R4a"/>
                     </view>
                     <navigationItem key="navigationItem" id="DzC-Sw-iYg"/>
                     <connections>
-                        <outlet property="pageControl" destination="0s3-iy-jXU" id="MTT-Ym-pFL"/>
-                        <outlet property="pagerView" destination="6Hq-UY-Vis" id="JAr-tg-HKE"/>
                         <outlet property="tableView" destination="cvb-F5-ALy" id="RUm-Hx-jdM"/>
                     </connections>
                 </viewController>
